@@ -18,6 +18,7 @@
 	<div class="map-start map-element map-element-primary" id="element-1">Mapa</div>
 	<div class="map-element map-element-secondary" id="element-2">Element</div>
 	<div class="map-element map-element-secondary" id="element-3">Element child</div>
+	<div class="map-element map-element-secondary" id="element-4">Element child2</div>
 
 </div>
 
@@ -28,6 +29,7 @@
 	window.onload = function(){  
 	 canvases.push( joinObjects($('#element-1'), $('#element-2')) )
 	 canvases.push( joinObjects($('#element-2'), $('#element-3')) )
+	 canvases.push( joinObjects($('#element-2'), $('#element-4')) )
 	};
 
 	function refreshLines()
@@ -35,20 +37,62 @@
 		$('canvas').remove()
 	 	canvases.push( joinObjects($('#element-1'), $('#element-2')) )
 	 	canvases.push( joinObjects($('#element-2'), $('#element-3')) )
+	 	canvases.push( joinObjects($('#element-2'), $('#element-4')) )
 
 	}
 
 
 	function joinObjects(object_f, object_s)
 	{
-		//objects switch
-		if(object_f.offset().top > object_s.offset().top)
-		{
-			temp_object = object_f
-			object_f = object_s
-			object_s = temp_object
-		}
 
+		draw_start_x = 0
+		draw_start_y = 0	
+		draw_end_x = 0
+		draw_end_y = 0	
+		end_x = Math.abs(object_s.offset().left - object_f.offset().left)
+		end_y = Math.abs(object_s.offset().top - object_f.offset().top)
+		//define position and end point  
+		if(object_f.offset().top < object_s.offset().top)
+		{
+			start_y = object_f.offset().top
+			if(object_f.offset().left < object_s.offset().left)
+			{
+				start_x = object_f.offset().left
+				draw_start_x = 0
+				draw_start_y = 0
+				draw_end_y = end_y
+				draw_end_x = end_x
+			}
+			else
+			{
+				start_x = object_s.offset().left
+				draw_start_x = 0
+				draw_start_y = end_y
+				draw_end_y = 0
+				draw_end_x = end_x
+			}
+			
+		}
+		else
+		{
+			start_y = object_s.offset().top
+			if(object_f.offset().left < object_s.offset().left)
+			{
+				start_x = object_f.offset().left
+				draw_start_x = 0
+				draw_start_y = end_y
+				draw_end_y = 0
+				draw_end_x = end_x
+			}
+			else
+			{
+				start_x = object_s.offset().left
+				draw_start_x = 0
+				draw_start_y = 0
+				draw_end_y = end_y
+				draw_end_x = end_x
+			}
+		}
 
 		//define line width
 		line_width = 1.4
@@ -61,11 +105,7 @@
 	 	$(canvas).attr('data-start', object_f.attr('id'))
 	 	$(canvas).attr('data-end', object_s.attr('id'))
 
-	 	//define position and end point  
-		start_x = object_f.offset().left
-		start_y = object_f.offset().top
-		end_x = Math.abs(object_s.offset().left - object_f.offset().left)
-		end_y = Math.abs(object_s.offset().top - object_f.offset().top)
+		
 
 		//apply to canvas
 		$(canvas).attr('width', end_x + line_width)
@@ -81,12 +121,12 @@
 		//absolute position of canvas
 		context.beginPath();
 		context.bezierCurveTo(
+			draw_start_x, 
+			draw_start_y, 
 			0, 
 			0, 
-			0, 
-			0, 
-			end_x, 
-			end_y
+			draw_end_x, 
+			draw_end_y
 		);
 		context.stroke();
 
