@@ -15,9 +15,119 @@
 
 <div class="map-canvas">
 
-	<div class="map-start">Mapa</div>
+	<div class="map-start map-element map-element-primary" id="element-1">Mapa</div>
+	<div class="map-element map-element-secondary" id="element-2">Element</div>
+	<div class="map-element map-element-secondary" id="element-3">Element child</div>
 
 </div>
+
+
+<script>
+	var canvases = []
+
+	window.onload = function(){  
+	 canvases.push( joinObjects($('#element-1'), $('#element-2')) )
+	 canvases.push( joinObjects($('#element-2'), $('#element-3')) )
+	};
+
+	function refreshLines()
+	{
+		$('canvas').remove()
+	 	canvases.push( joinObjects($('#element-1'), $('#element-2')) )
+	 	canvases.push( joinObjects($('#element-2'), $('#element-3')) )
+
+	}
+
+
+	function joinObjects(object_f, object_s)
+	{
+		//objects switch
+		if(object_f.offset().top > object_s.offset().top)
+		{
+			temp_object = object_f
+			object_f = object_s
+			object_s = temp_object
+		}
+
+
+		//define line width
+		line_width = 1.4
+
+		//new canvas element
+		canvas = document.createElement('canvas')
+	 	context = canvas.getContext("2d");  
+
+	 	//defines join elements for future refresh
+	 	$(canvas).attr('data-start', object_f.attr('id'))
+	 	$(canvas).attr('data-end', object_s.attr('id'))
+
+	 	//define position and end point  
+		start_x = object_f.offset().left
+		start_y = object_f.offset().top
+		end_x = Math.abs(object_s.offset().left - object_f.offset().left)
+		end_y = Math.abs(object_s.offset().top - object_f.offset().top)
+
+		//apply to canvas
+		$(canvas).attr('width', end_x + line_width)
+		$(canvas).attr('height', end_y + line_width)
+		$(canvas).css('top', start_y)
+		$(canvas).css('left', start_x)
+		$(canvas).addClass('map-curve')
+		context.lineWidth = line_width;
+
+		//draw 
+		//start point is always 0,0 
+		//becouse css left and top defines 
+		//absolute position of canvas
+		context.beginPath();
+		context.bezierCurveTo(
+			0, 
+			0, 
+			0, 
+			0, 
+			end_x, 
+			end_y
+		);
+		context.stroke();
+
+		//append to document
+		$('.map-canvas').append(canvas)
+
+		return canvas
+	}
+
+	$(document).ready( function() {
+
+		$('.map-element').mousedown( function(e) 
+		{
+			var element = $(this)
+			var oldX = e.pageX
+			var oldY = e.pageY
+			$(document).mousemove(function(e)
+			{
+				//calculate delta transitions
+				diffX = e.pageX - oldX
+				diffY = e.pageY - oldY
+
+				element.css( 'top', parseInt(element.css('top')) + diffY )
+				element.css( 'left', parseInt(element.css('left')) + diffX )
+
+				//set values for new delta
+				oldX = e.pageX
+				oldY = e.pageY
+
+				refreshLines()
+			});
+		});
+		
+		//unbind mousemove following
+		$(document).mouseup(function() {
+			$(document).unbind('mousemove');
+		});
+
+	})
+
+</script>
 
 </body>
 </html>
