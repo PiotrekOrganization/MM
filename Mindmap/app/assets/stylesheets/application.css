@@ -12,10 +12,67 @@
  *= require_tree .
  */
 
+body {
+	margin:0;
+	padding: 0;
+	font-family: Arial;
+}
 
 .map-canvas {
 	position: absolute;
 	height: 100%;
 	width: 100%;
 	background: #f1f1f1;
+	z-index: 1;
 }
+
+.map-start {
+	left: 500px;
+	top: 250px;
+}
+
+.map-element {
+	background: #333;
+	color: #fff;
+	font-weight: bold;
+	font-size: 14px;
+	padding: 10px 15px;
+	border-radius: 20px;
+	position: absolute;
+	z-index: 10;
+	cursor: pointer;
+}
+
+.map-element-primary {
+	color: white;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	background-color: #006DCC;
+	background-image: -moz-linear-gradient(top, #08C, #04C);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#08C), to(#04C));
+	background-image: -webkit-linear-gradient(top, #08C, #04C);
+	background-image: -o-linear-gradient(top, #08C, #04C);
+	background-image: linear-gradient(to bottom, #08C, #04C);
+	background-repeat: repeat-x;
+	border-color: #04C #04C #002A80;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0044cc', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+.map-curve {
+	position: absolute;
+	z-index: 9;
+}
+
+#element-2 {
+	top: 340px;
+	left: 640px;
+}
+
+#element-3 {
+	top: 340px;
+	left: 840px;
+}
+
+
+
