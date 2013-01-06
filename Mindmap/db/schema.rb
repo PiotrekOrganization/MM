@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130106161647) do
+ActiveRecord::Schema.define(:version => 20130106215813) do
 
   create_table "items", :force => true do |t|
     t.integer "parent_id"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(:version => 20130106161647) do
     t.decimal "lft",       :precision => 31, :scale => 30, :null => false
     t.decimal "rgt",       :precision => 31, :scale => 30, :null => false
     t.string  "name",                                      :null => false
+    t.integer "map_id"
   end
 
   add_index "items", ["lft"], :name => "index_items_on_lft"

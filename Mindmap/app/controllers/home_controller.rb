@@ -12,7 +12,8 @@ class HomeController < ApplicationController
 		@map = Map.find(params[:id])
 	end
 
-	def items_json		
+	def items_json	
+		@items = Item.all	
 		render :json => @items
 	end
 
