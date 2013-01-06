@@ -11,13 +11,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121217222516) do
+ActiveRecord::Schema.define(:version => 20130106161647) do
 
   create_table "items", :force => true do |t|
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-    t.string   "description"
+    t.integer "parent_id"
+    t.integer "lftp",                                      :null => false
+    t.integer "lftq",                                      :null => false
+    t.integer "rgtp",                                      :null => false
+    t.integer "rgtq",                                      :null => false
+    t.decimal "lft",       :precision => 31, :scale => 30, :null => false
+    t.decimal "rgt",       :precision => 31, :scale => 30, :null => false
+    t.string  "name",                                      :null => false
   end
+
+  add_index "items", ["lft"], :name => "index_items_on_lft"
+  add_index "items", ["lftp"], :name => "index_items_on_lftp"
+  add_index "items", ["lftq"], :name => "index_items_on_lftq"
+  add_index "items", ["parent_id"], :name => "index_items_on_parent_id"
+  add_index "items", ["rgt"], :name => "index_items_on_rgt"
 
   create_table "maps", :force => true do |t|
     t.datetime "created_at", :null => false
