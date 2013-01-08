@@ -3,7 +3,7 @@ development:
   encoding: unicode
   database: mindmap_development
   pool: 5
-  username: rafal
+  username: piotr
   password:
 
 # Warning: The database defined as "test" will be erased and
@@ -15,7 +15,7 @@ test:
   encoding: unicode
   database: mindmap_test
   pool: 5
-  username: rafal
+  username: piotr
   password:
 
 production:
@@ -23,5 +23,5 @@ production:
   encoding: unicode
   database: mindmap_production
   pool: 5
-  username: rafal
+  username: piotr
   password:
