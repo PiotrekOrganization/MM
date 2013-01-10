@@ -4,6 +4,12 @@ Mindmap::Application.routes.draw do
   match "/items" => "home#items_json"
 
 
+  namespace :user do
+    root :to => "map#index"
+    resources :map
+  end
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
