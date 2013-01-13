@@ -17,6 +17,10 @@ class Glue
 		@after(@useCase, 'showNode', (node) -> 
 			gui.renderNode(node)
 		)
+
+		@after(@gui, 'newNodePrepared', (node) -> 
+			usecase.createNode(node)
+		)
 	
 	before: (object, methodName, adviseMethod) ->
 		YouAreDaBomb(object, methodName).before(adviseMethod)
@@ -54,7 +58,6 @@ class Node
 		@children = children
 		@id = null
 
-
 class Gui
 
 	constructor: ->
@@ -62,19 +65,47 @@ class Gui
 		@control = $('.control-layer')
 
 	renderNode: (node) ->
-		title = node.title
-		gui_node = $('<div class="map-element map-element-secondary" data-id="'+node.id+'"></div>')
-		gui_node.html(title)
+		gui_node = document.createElement('div')
+		gui_node = $(gui_node)
+		gui_node.attr('class', 'map-element map-element-secondary')
+		gui_node.attr('data-id', node.id )
+		gui_node.css('top', 0)
+		gui_node.css('left', 0)
+		gui_node.html(node.title + ', #' + node.id)
+		if( node.parent ) 
+			gui_node.html( gui_node.html() + ', #' + node.parent)
 		@appendNode(gui_node)
 
 	appendNode: (node) ->
 		@canvas.append(node)
 		@prepareNodeTriggers(node)
+		@prepareNodeDrag(node)
 
 	prepareNodeTriggers: (node) ->
 		node.contextmenu( (event) => 
 			@showContextMenu(node)
 			return false
+		)
+
+	prepareNodeDrag: (node) ->
+		node.mousedown( (e) =>
+			oldX = e.pageX
+			oldY = e.pageY
+			$(document).mousemove( (e) =>
+				#calculate delta transitions
+				diffX = e.pageX - oldX
+				diffY = e.pageY - oldY
+
+				node.css( 'top', parseInt(node.css('top')) + diffY )
+				node.css( 'left', parseInt(node.css('left')) + diffX )
+				#set values for new delta
+				oldX = e.pageX
+				oldY = e.pageY
+			)
+			#unbind mousemove following
+			$(document).mouseup( =>
+				$(document).unbind('mousemove')
+			)
 		)
 
 	showContextMenu: (node) ->
@@ -84,6 +115,8 @@ class Gui
 		menuContainer.append(contextMenu)
 		@control.append(menuContainer)
 		contextMenu = menuContainer.find('.context-menu')
+		contextMenu.css 'left', parseInt node.css('left')
+		contextMenu.css 'top', parseInt node.css('top')
 		contextMenu.fadeIn(300)
 		@enableMenuHidder(contextMenu)
 		@prepareContextMenuTriggers(contextMenu, node)
@@ -91,14 +124,17 @@ class Gui
 	prepareContextMenuTriggers: (menu, node) ->
 		menu.find('.new-node').click( (event) =>
 			event.preventDefault()
-
-			)
+			@prepareNewNode(node.attr('data-id'))
+			menu.parent().remove()
+		)
 		menu.find('.remove-node').click( (event) =>
 			event.preventDefault()
-			node.remove()
+			@removeNode(node)
 			menu.parent().remove()
-			)
+		)
 
+	removeNode: (node) ->
+		node.remove()
 
 	hideAllContextMenus: ->
 		$('.context-menu').parent().remove()
@@ -110,6 +146,11 @@ class Gui
 			)
 		)
 
+	prepareNewNode: (parent) ->
+		node_object = new Node('node', parent)
+		@newNodePrepared(node_object)
+
+	newNodePrepared: (node) ->
 
 class Spa
 	constructor: ->

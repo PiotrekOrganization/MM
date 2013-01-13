@@ -33,6 +33,11 @@ body {
 	position: absolute;
 }
 
+.control-layer .context-menu {
+	position: absolute;
+	opacity: 0.9;
+}
+
 .map-start {
 	left: 500px;
 	top: 250px;
