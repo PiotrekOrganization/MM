@@ -5,7 +5,6 @@ Mindmap::Application.routes.draw do
 
 
   namespace :user do
-    root :to => "map#index"
     resources :map
   end
 

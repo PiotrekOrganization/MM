@@ -23,6 +23,8 @@ end
 gem 'jquery-rails'
 gem 'devise'
 gem 'acts_as_nested_interval'
+gem "handlebars"
+gem 'handlebars_assets'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
