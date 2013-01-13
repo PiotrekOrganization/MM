@@ -1,11 +1,21 @@
+auto_id = 0
+
 class Glue
 	constructor: (@useCase, @gui, @storage) ->
 		gui = @gui
 		storage = @storage
 		usecase = @useCase
 
-		@after(@useCase, 'createNode', (title) -> 
-			gui.renderNode(title)
+		@after(@useCase, 'createNode', (node) -> 
+			storage.saveNode(node)
+		)
+
+		@after(@storage, 'nodeSaved', (node) -> 
+			usecase.showNode(node)
+		)
+
+		@after(@useCase, 'showNode', (node) -> 
+			gui.renderNode(node)
 		)
 	
 	before: (object, methodName, adviseMethod) ->
@@ -19,9 +29,31 @@ class Glue
 
 class UseCase
 
-	createNode: (title) ->
+	createNode: (node) ->
+
+	showNode: (node) ->
 
 class Storage
+
+	constructor: ->
+		@nodes = []
+
+	saveNode: (node) ->
+		auto_id++
+		node.id = auto_id
+		@nodeSaved(node)
+
+	nodeSaved: (node) ->
+		@nodes.push(node)
+
+
+class Node
+	constructor: (title, parent = null, children = []) -> 
+		@title = title
+		@parent = parent
+		@children = children
+		@id = null
+
 
 class Gui
 
@@ -29,10 +61,11 @@ class Gui
 		@canvas = $('.map-canvas')
 		@control = $('.control-layer')
 
-	renderNode: (title) ->
-		node = $('<div class="map-element map-element-secondary"></div>')
-		node.html(title)
-		@appendNode(node)
+	renderNode: (node) ->
+		title = node.title
+		gui_node = $('<div class="map-element map-element-secondary" data-id="'+node.id+'"></div>')
+		gui_node.html(title)
+		@appendNode(gui_node)
 
 	appendNode: (node) ->
 		@canvas.append(node)
@@ -84,6 +117,7 @@ class Spa
 		usecase = new UseCase
 		gui = new Gui
 		glue = new Glue(usecase, gui, storage)
-		usecase.createNode('test')
+		root = new Node('Map')
+		usecase.createNode(root)
 
 $ -> new Spa
