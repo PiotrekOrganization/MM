@@ -65,18 +65,21 @@ class Gui
 		@control = $('.control-layer')
 
 	renderNode: (node) ->
-		gui_node = document.createElement('div')
-		gui_node = $(gui_node)
-		gui_node.attr('class', 'map-element map-element-secondary')
+		gui_node_body = document.createElement('div')
+		gui_node = $('<div></div>')
+		gui_node_body = $(gui_node_body)
+		gui_node_body.attr('class', 'map-element map-element-secondary')
+		gui_node.attr('class', 'map-element-container')
 		gui_node.attr('data-id', node.id )
+		gui_node.append(gui_node_body)
 		gui_node.css('top', 0)
 		gui_node.css('left', 0)
-		gui_node.html(node.title + ', #' + node.id)
+		gui_node_body.html(node.title + ', #' + node.id)
 		if( node.parent ) 
-			gui_node.html( gui_node.html() + ', #' + node.parent)
-		@appendNode(gui_node)
+			gui_node_body.html( gui_node_body.html() + ', #' + node.parent)
+		@appendNode(gui_node, node.parent)
 
-	appendNode: (node) ->
+	appendNode: (node, parent) ->
 		@canvas.append(node)
 		@prepareNodeTriggers(node)
 		@prepareNodeDrag(node)
@@ -85,6 +88,10 @@ class Gui
 		node.contextmenu( (event) => 
 			@showContextMenu(node)
 			return false
+		)
+		node.dblclick( (event) =>
+			event.preventDefault
+			@enableEditMode(node)
 		)
 
 	prepareNodeDrag: (node) ->
@@ -141,7 +148,7 @@ class Gui
 
 	enableMenuHidder: (menu) ->
 		event = @canvas.click( =>
-			menu.fadeOut(600, ->
+			menu.fadeOut(300, ->
 				$(this).remove()
 			)
 		)
@@ -152,13 +159,45 @@ class Gui
 
 	newNodePrepared: (node) ->
 
+	fitNodeLayout: (children_container) ->
+		outerHeight = children_container.outerHeight() - children_container.parent().find('> .map-element').outerHeight()
+		console.log(outerHeight)
+		height = (outerHeight/2)*-1
+		children_container.css('bottom', height)
+		#children_container.parent().css('margin-top', height*2)
+
+
+	enableEditMode: (node) ->
+		input = $('<input type="text" class="edit-title" value="'+node.find('.map-element').text()+'" />')
+		node.find('.map-element').html(input)
+		node.unbind()
+		input.keydown( (event) =>
+			if(event.keyCode == 13)
+				@disableEditMode(node)
+		)
+		$(window).click( (event) =>
+			@disableEditMode( node )
+			$(this).unbind( event );
+		)
+		node.click( (event) =>
+			event.stopPropagation()
+		)
+
+	disableEditMode: (node) ->
+		node.find('.map-element').html( node.find('.map-element input.edit-title').val() )
+		node.unbind()
+		@prepareNodeTriggers(node)
+		@prepareNodeDrag(node)
+
 class Spa
 	constructor: ->
 		storage = new Storage
 		usecase = new UseCase
 		gui = new Gui
 		glue = new Glue(usecase, gui, storage)
-		root = new Node('Map')
+		root = new Node('Root')
 		usecase.createNode(root)
+		root2 = new Node('Second Root')
+		usecase.createNode(root2)
 
 $ -> new Spa

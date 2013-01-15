@@ -50,9 +50,33 @@ body {
 	font-size: 14px;
 	padding: 10px 15px;
 	border-radius: 20px;
-	position: absolute;
 	z-index: 10;
 	cursor: pointer;
+	display: inline-block;
+}
+
+.map-element-children {
+	display: inline-block;
+	position: relative;
+}
+
+.map-element-children .map-element,
+.map-element-children .map-element-container
+{
+	position: relative;
+}
+
+.map-element-children .map-element {
+	background: none;
+	border: 0;
+	color: #333;
+	font-size: 12px;
+	border-bottom: solid 2px #666;
+	border-radius: 0;
+}
+
+.map-element-container {
+	position: absolute;
 }
 
 .map-element-primary {
