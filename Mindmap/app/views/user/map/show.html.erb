@@ -1,18 +1,91 @@
 
-<div class="map-canvas">
-
-	<!--<div class="map-start map-element map-element-primary" id="element-1">Mapa</div>
-	<div class="map-element map-element-secondary" id="element-2">Element</div>
-	<div class="map-element map-element-secondary" id="element-3">Element child</div>
-	<div class="map-element map-element-secondary" id="element-4">Element child2</div>-->
-
-</div>
-
+<div class="map-background"></div>
+<div class="map-canvas"></div>
 <div class="control-layer"></div>
+<div class="lines-layer">
+	<div id="draw-paper"></div>
+</div>
 
 
 <script>
 /*
+
+if parent == null
+			return
+
+		object_f = node
+		object_s = @canvas.find('.map-element-container[data-id='+parent+']')
+
+		line_width = 1.4
+		draw_start_x = 0
+		draw_start_y = 0	
+		draw_end_x = 0
+		draw_end_y = 0	
+		end_x = Math.abs(object_s.offset().left - object_f.offset().left)
+		end_y = Math.abs(object_s.offset().top - object_f.offset().top)
+		#define position and end point  
+		if(object_f.offset().top < object_s.offset().top)
+			start_y = object_f.offset().top
+			if(object_f.offset().left < object_s.offset().left)
+				start_x = object_f.offset().left
+				draw_start_x = 0
+				draw_start_y = 0
+				draw_end_y = end_y
+				draw_end_x = end_x			
+			else	
+				start_x = object_s.offset().left
+				draw_start_x = 0
+				draw_start_y = end_y
+				draw_end_y = 0
+				draw_end_x = end_x
+			console.log('test')
+		else
+			start_y = object_s.offset().top
+			if(object_f.offset().left < object_s.offset().left)
+				start_x = object_f.offset().left
+				draw_start_x = 0
+				draw_start_y = end_y
+				draw_end_y = 0
+				draw_end_x = end_x
+			else			
+				start_x = object_s.offset().left
+				draw_start_x = 0
+				draw_start_y = 0
+				draw_end_y = end_y
+				draw_end_x = end_x
+			console.log('test2')
+
+
+		#
+		canvas = document.createElement('canvas')
+		context = canvas.getContext('2d')
+		$(canvas).attr('width', end_x + line_width)
+		$(canvas).attr('height', end_y + line_width)
+		$(canvas).css('top', start_y)
+		$(canvas).css('left', start_x)
+		$(canvas).addClass('map-curve')
+		context.lineWidth = line_width;
+
+		#draw 
+		#start point is always 0,0 
+		#becouse css left and top defines 
+		#absolute position of canvas
+		context.beginPath();
+		context.bezierCurveTo(
+			draw_start_x, 
+			draw_start_y, 
+			0, 
+			0, 
+			draw_end_x, 
+			draw_end_y
+		);
+		context.stroke();
+
+		#append to document
+		@lines.append(canvas)
+
+		return canvas
+
 	var canvases = []
 
 	window.onload = function(){  

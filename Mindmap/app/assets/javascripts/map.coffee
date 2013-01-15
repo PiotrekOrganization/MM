@@ -21,6 +21,22 @@ class Glue
 		@after(@gui, 'newNodePrepared', (node) -> 
 			usecase.createNode(node)
 		)
+
+		@after(@gui, 'nodeCurvesPrepared', (pathSet) ->
+			storage.storePath(pathSet)
+		)
+
+		@after(@gui, 'nodeDragStartTrigged', (node) ->
+			storage.preparePathsForDrag(node)
+		)
+
+		@after(@storage, 'pathsForDragPreapared', (node, paths_array) ->
+			gui.nodeDragEnable(node, paths_array)
+		)
+
+		@after(@gui, 'reDrown', (pathSet) ->
+			storage.refreshPathObject(pathSet)
+		)
 	
 	before: (object, methodName, adviseMethod) ->
 		YouAreDaBomb(object, methodName).before(adviseMethod)
@@ -41,6 +57,7 @@ class Storage
 
 	constructor: ->
 		@nodes = []
+		@paths = []
 
 	saveNode: (node) ->
 		auto_id++
@@ -49,6 +66,26 @@ class Storage
 
 	nodeSaved: (node) ->
 		@nodes.push(node)
+
+	storePath: (pathSet) ->
+		@paths.push(pathSet)
+
+	getNodePaths: (node_id) ->
+		result = []
+		for path in @paths
+			if path[0] == node_id or path[1] == node_id
+				result.push(path)
+		return result
+
+	preparePathsForDrag: (node_id) ->
+		@pathsForDragPreapared node_id, @getNodePaths(node_id)
+
+	pathsForDragPreapared: (node_id, paths_array) ->
+
+	refreshPathObject: (pathSet) ->
+		for path in @paths
+			if path[0] == pathSet[0] and path[1] == pathSet[1]
+				path[2] = pathSet[2]
 
 
 class Node
@@ -63,6 +100,8 @@ class Gui
 	constructor: ->
 		@canvas = $('.map-canvas')
 		@control = $('.control-layer')
+		@lines = $('.lines-layer')
+		@paper = Raphael("draw-paper", $(window).width(), $(window).height())
 
 	renderNode: (node) ->
 		gui_node_body = document.createElement('div')
@@ -83,6 +122,8 @@ class Gui
 		@canvas.append(node)
 		@prepareNodeTriggers(node)
 		@prepareNodeDrag(node)
+		if parent != null
+			@prepareNodeCurves(node, parent)
 
 	prepareNodeTriggers: (node) ->
 		node.contextmenu( (event) => 
@@ -96,25 +137,36 @@ class Gui
 
 	prepareNodeDrag: (node) ->
 		node.mousedown( (e) =>
-			oldX = e.pageX
-			oldY = e.pageY
+			@nodeDragStartTrigged parseInt node.attr('data-id')
+		)
+
+	nodeDragStartTrigged: (node_id) ->
+
+	nodeDragEnable: (node_id, paths) ->
+		node = @canvas.find('.map-element-container[data-id='+node_id+']')
+		$(document).mousemove( (e) =>
+			@oldX = e.pageX
+			@oldY = e.pageY
+			$(document).unbind('mousemove')
 			$(document).mousemove( (e) =>
 				#calculate delta transitions
-				diffX = e.pageX - oldX
-				diffY = e.pageY - oldY
+				diffX = e.pageX - @oldX
+				diffY = e.pageY - @oldY
 
 				node.css( 'top', parseInt(node.css('top')) + diffY )
 				node.css( 'left', parseInt(node.css('left')) + diffX )
 				#set values for new delta
-				oldX = e.pageX
-				oldY = e.pageY
+				@oldX = e.pageX
+				@oldY = e.pageY
 			)
 			#unbind mousemove following
 			$(document).mouseup( =>
 				$(document).unbind('mousemove')
+				for path in paths
+					@reDraw @canvas.find('.map-element-container[data-id='+path[0]+']'), @canvas.find('.map-element-container[data-id='+path[1]+']'), path[2]
 			)
 		)
-
+		
 	showContextMenu: (node) ->
 		@hideAllContextMenus()
 		contextMenu = HandlebarsTemplates['contextMenu']
@@ -188,6 +240,28 @@ class Gui
 		node.unbind()
 		@prepareNodeTriggers(node)
 		@prepareNodeDrag(node)
+
+	prepareNodeCurves: (node, parent) ->
+		node_y = node.offset().top
+		node_x = node.offset().left
+		parent = @canvas.find('.map-element-container[data-id='+parent+']')
+		parent_y = parent.offset().top
+		parent_x = parent.offset().left
+		path = @paper.path('M' + parent_x + ' ' + parent_y + 'L' + node_x + ' ' + node_y);
+		@nodeCurvesPrepared [parseInt( node.attr('data-id') ), parseInt( parent.attr('data-id') ), path]
+
+	nodeCurvesPrepared: (pathSet) ->
+
+	reDrown: (pathSet) ->
+
+	reDraw: (node, parent, path) ->
+		path.remove()
+		node_y = node.offset().top
+		node_x = node.offset().left
+		parent_y = parent.offset().top
+		parent_x = parent.offset().left
+		path = @paper.path('M' + parent_x + ' ' + parent_y + 'L' + node_x + ' ' + node_y);
+		@reDrown [parseInt( node.attr('data-id') ), parseInt( parent.attr('data-id') ), path]
 
 class Spa
 	constructor: ->

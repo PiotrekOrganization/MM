@@ -20,7 +20,7 @@ body {
 	font-family: Arial;
 }
 
-.map-canvas {
+.map-background {
 	position: absolute;
 	height: 100%;
 	width: 100%;
@@ -28,8 +28,18 @@ body {
 	z-index: 1;
 }
 
+.map-canvas {
+	z-index: 20;
+	position: relative;
+}
+
+.lines-layer {
+	position: absolute;
+	z-index: 10;
+}
+
 .control-layer {
-	z-index: 2;
+	z-index: 30;
 	position: absolute;
 }
 
