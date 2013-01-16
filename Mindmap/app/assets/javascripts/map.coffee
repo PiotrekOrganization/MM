@@ -220,6 +220,7 @@ class Gui
 
 
 	enableEditMode: (node) ->
+		node.addClass('edit-on')
 		input = $('<input type="text" class="edit-title" value="'+node.find('.map-element').text()+'" />')
 		node.find('.map-element').html(input)
 		node.unbind()
@@ -236,6 +237,7 @@ class Gui
 		)
 
 	disableEditMode: (node) ->
+		node.removeClass('edit-on')
 		node.find('.map-element').html( node.find('.map-element input.edit-title').val() )
 		node.unbind()
 		@prepareNodeTriggers(node)

@@ -28,6 +28,21 @@ body {
 	z-index: 1;
 }
 
+.map-element input.edit-title {
+	margin: 0;
+	background: #222;
+	color: #f1f1f1;
+	border: 1px solid #111;
+	font-size: 14px;
+	margin-top: -8px;
+	margin-bottom: -6px;
+	border-radius: 10px;
+	display: inline;
+	padding-left: 8px;
+	margin-left: -9px;
+	margin-right: -9px;
+}
+
 .map-canvas {
 	z-index: 20;
 	position: relative;
@@ -56,10 +71,9 @@ body {
 .map-element {
 	background: #333;
 	color: #fff;
-	font-weight: bold;
 	font-size: 14px;
 	padding: 10px 15px;
-	border-radius: 20px;
+	border-radius: 13px;
 	z-index: 10;
 	cursor: pointer;
 	display: inline-block;
@@ -87,6 +101,12 @@ body {
 
 .map-element-container {
 	position: absolute;
+	z-index: 21;
+	opacity: 0.95;
+}
+
+.map-element-container.edit-on {
+	z-index: 22;
 }
 
 .map-element-primary {
