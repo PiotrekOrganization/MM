@@ -40,7 +40,7 @@ class Glue
 		)
 
 		@after(@gui, 'newRelation', (f_id, s_id) ->
-			useCase.createRelation(f_id, s_id, 'no title') 
+			useCase.createRelation(parseInt(f_id), parseInt(s_id), 'no title') 
 		)
 	
 		@after(@useCase, 'createRelation', (f_id, s_id, title) ->
@@ -53,6 +53,18 @@ class Glue
 
 		@after(@useCase, 'drawRelation', (relation) ->
 			gui.drawRelation(relation)
+		)
+
+		@after(@gui, 'addToRelation', (label_id, element_id) ->
+			storage.addToRelation(parseInt(label_id), parseInt(element_id)) 
+		)
+
+		@after(@storage, 'newRelationElementSaved', (relation) ->
+			usecase.drawLine(relation.label.id, relation.elements[1])
+		)
+
+		@after(@useCase, 'drawLine', (element_f, element_s) ->
+			gui.drawLine(element_f, element_s)
 		)
 
 	before: (object, methodName, adviseMethod) ->
@@ -73,6 +85,8 @@ class UseCase
 	createRelation: (first_node_id, second_node_id, title) ->
 
 	drawRelation: (relation) ->
+
+	drawLine: (element_f, element_s) ->
 
 class Storage
 
@@ -112,6 +126,7 @@ class Storage
 	saveRelation: (f_id, s_id, title) ->
 		return false if @getRelation( f_id, s_id )
 		relation = new Relation(f_id, s_id, title)
+		relation.id = ++auto_id_relations
 		@relations.push(relation)
 		relation_label = new Node('no title', 2)
 		@saveNode(relation_label)
@@ -125,8 +140,36 @@ class Storage
 				return relation
 		return false
 
+	getNode: (id) ->
+		for node in @nodes
+			if node.id == id
+				return node
+		return false
+
+	getRelationByLabel: (label_id) ->
+		for relation in @relations
+			console.log(relation.label.id)
+			console.log(label_id)
+			if relation.label.id == label_id
+				 return relation
+		return false
+
 	relationSaved: (relation) ->
 		console.log(@relations)
+
+	addToRelation: (label_id, node_id) ->
+		relation = @getRelationByLabel(label_id)
+		relation_top_element = relation.elements[0]
+		console.log('node_id:')
+		console.log(node_id)
+		new_relation = new Relation(relation_top_element, node_id, relation.title)
+		new_relation.id = ++auto_id_relations
+		new_relation.label = @getNode(label_id)
+		@relations.push(new_relation)
+		@newRelationElementSaved(new_relation) # this will enable usecase and gui which will draw lines
+
+	newRelationElementSaved: (relation) ->
+		console.log(relation)
 
 class Node
 	constructor: (title, type = 1) -> 
@@ -175,11 +218,12 @@ class Gui
 		gui_node_body.attr('class', 'map-element map-element-relation-label')
 		gui_node.attr('class', 'map-element-container')
 		gui_node.attr('data-id', node.id )
+		gui_node.attr('data-type', node.type )
 		gui_node.append(gui_node_body)
 		gui_node.css('top', 0)
 		gui_node.css('left', 0)
 		gui_node_body.html(node.title + ', #' + node.id)
-		@appendNode(gui_node, node.relations)
+		@appendNode(gui_node, node.relations, node.type)
 
 	renderStandardNode: (node) ->
 		gui_node_body = document.createElement('div')
@@ -188,26 +232,42 @@ class Gui
 		gui_node_body.attr('class', 'map-element map-element-secondary')
 		gui_node.attr('class', 'map-element-container')
 		gui_node.attr('data-id', node.id )
+		gui_node.attr('data-type', node.type )
 		gui_node.append(gui_node_body)
 		gui_node.css('top', 0)
 		gui_node.css('left', 0)
 		gui_node_body.html(node.title + ', #' + node.id)
-		@appendNode(gui_node, node.relations)
+		@appendNode(gui_node, node.relations, node.type)
 
-	appendNode: (node, parent) ->
+	appendNode: (node, parent, type) ->
 		@canvas.append(node)
-		@prepareNodeTriggers(node)
+		@prepareNodeTriggers(node, type)
 		@prepareNodeDrag(node)
 
 	prepareNodeTriggers: (node) ->
-		node.contextmenu( (event) => 
-			@showContextMenu(node)
+		type = parseInt(node.attr('data-type'))
+		node.contextmenu( (event) =>
+			@showContextMenu(node) if type == 1
+			@showRelationMenu(node) if type == 2
 			return false
 		)
 		node.dblclick( (event) =>
 			event.preventDefault
 			@enableEditMode(node)
 		)
+
+	showRelationMenu: (node) ->
+		@hideAllContextMenus()
+		contextMenu = HandlebarsTemplates['relationMenu']
+		menuContainer = $('<div></div>')
+		menuContainer.append(contextMenu)
+		@control.append(menuContainer)
+		contextMenu = menuContainer.find('.context-menu')
+		contextMenu.css 'left', parseInt node.css('left')
+		contextMenu.css 'top', parseInt node.css('top')
+		contextMenu.fadeIn(300)
+		@enableMenuHidder(contextMenu)
+		@prepareRelationMenuTriggers(contextMenu, node)
 
 	prepareNodeDrag: (node) ->
 		node.mousedown( (e) =>
@@ -315,6 +375,52 @@ class Gui
 			relation_label_id
 		)
 
+	# this function draws line between two elements and set update actions to lines
+	drawLine: (element_f_id, element_s_id) ->
+		console.log('gui.drawLine')
+		console.log(element_f_id)
+		console.log(element_s_id)
+		@prepareNodeCurves(
+			element_f_id,
+			element_s_id
+		)
+
+	#those are triggers for all buttons in contect menu which is shown after left click on relation label
+	prepareRelationMenuTriggers: (menu, node) ->
+		menu.find('.select-related').click( (event) =>
+			event.preventDefault()
+			menu.parent().remove()
+			@selectNodeToAddToRelation(node.attr('data-id'))
+		)
+
+	# enables select node mode
+	selectNodeToAddToRelation: (relation_label_id) ->
+		@showMessage('Please select element which you want to be related with.')
+		$('.map-element-container').not('[data-id='+relation_label_id+']').hover \
+			( -> 
+				$(this).addClass('highlight') 
+			), \
+			( -> 
+				$(this).removeClass('highlight') 
+			)
+		$('.map-element-container').not('[data-id='+relation_label_id+']').click( (event) => 
+			selected_id = $(event.currentTarget).attr('data-id')
+			$('.map-element-container').not('[data-id='+relation_label_id+']').removeClass('highlight')
+			$('.map-element-container').not('[data-id='+relation_label_id+']').unbind('hover')
+			$('.map-element-container').not('[data-id='+relation_label_id+']').unbind('click')
+			@emptySpace.unbind('click')
+			@addToRelation( parseInt(relation_label_id), parseInt(selected_id) )
+		)
+		@emptySpace.click( (event) =>
+			$('.map-element-container').not('[data-id='+relation_label_id+']').removeClass('highlight')
+			$('.map-element-container').not('[data-id='+relation_label_id+']').unbind('hover')
+			$('.map-element-container').not('[data-id='+relation_label_id+']').unbind('click')
+			$(this).unbind( event )
+		)
+
+	# this triggers usecase to add element in relation
+	addToRelation: (relation_label_id, node_id) ->
+
 	removeNode: (node) ->
 		node.remove()
 
@@ -328,8 +434,8 @@ class Gui
 			)
 		)
 
-	prepareNewNode: (parent) ->
-		node_object = new Node('node', parent)
+	prepareNewNode: (related_node_id) ->
+		node_object = new Node('node', 1)
 		@newNodePrepared(node_object)
 
 	newNodePrepared: (node) ->
