@@ -112,11 +112,23 @@ class Relation
 class Gui
 
 	constructor: ->
+		@messagesBox = $('.messages-box')
 		@canvas = $('.map-canvas')
 		@control = $('.control-layer')
 		@lines = $('.lines-layer')
 		@paper = Raphael("draw-paper", $(window).width(), $(window).height())
 		@emptySpace = @lines
+		@helloMessage()
+
+	helloMessage: ->
+		@showMessage('System is ready. Feel free to express your minds.')
+
+	showMessage: (content, type = 'notice') ->
+		context = {content: content, type: type}
+		message = HandlebarsTemplates['message'](context)
+		message = $(message)
+		@messagesBox.append( message )
+		message.fadeIn().delay(4000).fadeOut()
 
 	renderNode: (node) ->
 		gui_node_body = document.createElement('div')
