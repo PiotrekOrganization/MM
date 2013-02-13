@@ -145,5 +145,9 @@ body {
 	left: 840px;
 }
 
+.map-element-container.highlight .map-element {
+	background: #0088cc !important ;
+}
+
 
 

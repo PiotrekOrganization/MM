@@ -37,7 +37,15 @@ class Glue
 		@after(@gui, 'reDrown', (pathSet) ->
 			storage.refreshPathObject(pathSet)
 		)
+
+		@after(@gui, 'newRelation', (f_id, s_id) ->
+			useCase.createRelation(f_id, s_id, null) 
+		)
 	
+		@after(@useCase, 'createRelation', (f_id, s_id, title) ->
+			storage.saveRelation(f_id, s_id, title)
+		)
+
 	before: (object, methodName, adviseMethod) ->
 		YouAreDaBomb(object, methodName).before(adviseMethod)
 	
@@ -52,6 +60,8 @@ class UseCase
 	createNode: (node) ->
 
 	showNode: (node) ->
+
+	createRelation: (first_node_id, second_node_id, title) ->
 
 class Storage
 
@@ -89,11 +99,15 @@ class Storage
 
 
 class Node
-	constructor: (title, parent = null, children = []) -> 
+	constructor: (title) -> 
 		@title = title
-		@parent = parent
-		@children = children
 		@id = null
+		@relations = []
+
+class Relation 
+	constructor: (name, element_f, element_s) ->
+		@name = name
+		@elements = [element_f, element_s]
 
 class Gui
 
@@ -102,6 +116,7 @@ class Gui
 		@control = $('.control-layer')
 		@lines = $('.lines-layer')
 		@paper = Raphael("draw-paper", $(window).width(), $(window).height())
+		@emptySpace = @lines
 
 	renderNode: (node) ->
 		gui_node_body = document.createElement('div')
@@ -114,16 +129,14 @@ class Gui
 		gui_node.css('top', 0)
 		gui_node.css('left', 0)
 		gui_node_body.html(node.title + ', #' + node.id)
-		if( node.parent ) 
-			gui_node_body.html( gui_node_body.html() + ', #' + node.parent)
-		@appendNode(gui_node, node.parent)
+		@appendNode(gui_node, node.relations)
 
 	appendNode: (node, parent) ->
 		@canvas.append(node)
 		@prepareNodeTriggers(node)
 		@prepareNodeDrag(node)
-		if parent != null
-			@prepareNodeCurves(node, parent)
+		#if parent != null
+		#	@prepareNodeCurves(node, parent)
 
 	prepareNodeTriggers: (node) ->
 		node.contextmenu( (event) => 
@@ -180,6 +193,8 @@ class Gui
 		@enableMenuHidder(contextMenu)
 		@prepareContextMenuTriggers(contextMenu, node)
 
+
+	# those are triggers for all buttons in contect menu which is shown after left click on node
 	prepareContextMenuTriggers: (menu, node) ->
 		menu.find('.new-node').click( (event) =>
 			event.preventDefault()
@@ -191,6 +206,37 @@ class Gui
 			@removeNode(node)
 			menu.parent().remove()
 		)
+		menu.find('.new-relation').click( (event) =>
+			event.preventDefault()
+			menu.parent().remove()
+			@selectNodeToSetRelation(node.attr('data-id'))
+		)
+
+	# enables select node mode
+	selectNodeToSetRelation: (relation_mate_id) ->
+		$('.map-element-container').not('[data-id='+relation_mate_id+']').hover \
+			( -> 
+				$(this).addClass('highlight') 
+			), \
+			( -> 
+				$(this).removeClass('highlight') 
+			)
+		$('.map-element-container').not('[data-id='+relation_mate_id+']').click( -> 
+			selected_id = $(this).attr('data-id')
+			$('.map-element-container').not('[data-id='+relation_mate_id+']').removeClass('highlight')
+			$('.map-element-container').not('[data-id='+relation_mate_id+']').unbind('hover')
+			$('.map-element-container').not('[data-id='+relation_mate_id+']').unbind('click')
+		)
+		@emptySpace.click( (event) => 
+			console.log('test')
+			$('.map-element-container').not('[data-id='+relation_mate_id+']').removeClass('highlight')
+			$('.map-element-container').not('[data-id='+relation_mate_id+']').unbind('hover')
+			$('.map-element-container').not('[data-id='+relation_mate_id+']').unbind('click')
+			$(this).unbind( event )
+		)
+
+	# this triggers usecase to create this relation
+	newRelation: (element_f_id, element_s_id) ->
 
 	removeNode: (node) ->
 		node.remove()
@@ -199,7 +245,7 @@ class Gui
 		$('.context-menu').parent().remove()
 
 	enableMenuHidder: (menu) ->
-		event = @canvas.click( =>
+		event = @emptySpace.click( =>
 			menu.fadeOut(300, ->
 				$(this).remove()
 			)
@@ -274,6 +320,8 @@ class Spa
 		root = new Node('Root')
 		usecase.createNode(root)
 		root2 = new Node('Second Root')
+		root3 = new Node('Projekt')
 		usecase.createNode(root2)
+		usecase.createNode(root3)
 
 $ -> new Spa
