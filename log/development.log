@@ -26823,3 +26823,25 @@ Served asset /map.js - 304 Not Modified (2ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-13 22:24:24 +0100
 Served asset /application.js - 304 Not Modified (13ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/user/map/1" for 127.0.0.1 at 2013-02-13 22:58:00 +0100
+Processing by User::MapController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered user/map/show.html.erb within layouts/map (3.2ms)
+Compiled twitter-bootstrap-static/bootstrap.css  (85ms)  (pid 74099)
+Compiled twitter-bootstrap-static/fontawesome.css  (6ms)  (pid 74099)
+Compiled application.css  (108ms)  (pid 74099)
+Compiled jquery.js  (32ms)  (pid 74099)
+Compiled jquery_ujs.js  (0ms)  (pid 74099)
+Compiled handlebars.js  (0ms)  (pid 74099)
+Compiled YouAreDaBomb.js  (1ms)  (pid 74099)
+Compiled raphael-min.js  (1ms)  (pid 74099)
+Compiled templates/contextMenu.js  (32ms)  (pid 74099)
+Compiled templates/message.js  (12ms)  (pid 74099)
+Compiled templates/relationMenu.js  (1ms)  (pid 74099)
+Compiled application.js  (130ms)  (pid 74099)
+Compiled map.js  (372ms)  (pid 74099)
+Completed 200 OK in 776ms (Views: 775.5ms | ActiveRecord: 0.0ms)
