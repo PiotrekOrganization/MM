@@ -1,4 +1,5 @@
 auto_id = 0
+auto_id_relations = 0
 
 class Glue
 	constructor: (@useCase, @gui, @storage) ->
@@ -39,11 +40,19 @@ class Glue
 		)
 
 		@after(@gui, 'newRelation', (f_id, s_id) ->
-			useCase.createRelation(f_id, s_id, null) 
+			useCase.createRelation(f_id, s_id, 'no title') 
 		)
 	
 		@after(@useCase, 'createRelation', (f_id, s_id, title) ->
 			storage.saveRelation(f_id, s_id, title)
+		)
+
+		@after(@storage, 'relationSaved', (relation) ->
+			useCase.drawRelation(relation)
+		)
+
+		@after(@useCase, 'drawRelation', (relation) ->
+			gui.drawRelation(relation)
 		)
 
 	before: (object, methodName, adviseMethod) ->
@@ -63,11 +72,14 @@ class UseCase
 
 	createRelation: (first_node_id, second_node_id, title) ->
 
+	drawRelation: (relation) ->
+
 class Storage
 
 	constructor: ->
 		@nodes = []
 		@paths = []
+		@relations = []
 
 	saveNode: (node) ->
 		auto_id++
@@ -97,17 +109,38 @@ class Storage
 			if path[0] == pathSet[0] and path[1] == pathSet[1]
 				path[2] = pathSet[2]
 
+	saveRelation: (f_id, s_id, title) ->
+		return false if @getRelation( f_id, s_id )
+		relation = new Relation(f_id, s_id, title)
+		@relations.push(relation)
+		relation_label = new Node('no title', 2)
+		@saveNode(relation_label)
+		relation.label = relation_label
+		@relationSaved(relation)
+
+
+	getRelation: (f_id, s_id) ->
+		for relation in @relations
+			if (relation.elements[0] == f_id and relation.elements[1] == s_id) or (relation.elements[1] == f_id and relation.elements[0] == s_id)
+				return relation
+		return false
+
+	relationSaved: (relation) ->
+		console.log(@relations)
 
 class Node
-	constructor: (title) -> 
+	constructor: (title, type = 1) -> 
+		@type = type
 		@title = title
 		@id = null
 		@relations = []
 
 class Relation 
-	constructor: (name, element_f, element_s) ->
-		@name = name
+	constructor: (element_f, element_s, title) ->
+		@id = null
+		@title = title
 		@elements = [element_f, element_s]
+		@label = null
 
 class Gui
 
@@ -131,6 +164,24 @@ class Gui
 		message.fadeIn().delay(4000).fadeOut()
 
 	renderNode: (node) ->
+		switch node.type
+			when 1 then @renderStandardNode node
+			when 2 then @renderCategoryLabel node
+
+	renderCategoryLabel: (node) ->
+		gui_node_body = document.createElement('div')
+		gui_node = $('<div></div>')
+		gui_node_body = $(gui_node_body)
+		gui_node_body.attr('class', 'map-element map-element-relation-label')
+		gui_node.attr('class', 'map-element-container')
+		gui_node.attr('data-id', node.id )
+		gui_node.append(gui_node_body)
+		gui_node.css('top', 0)
+		gui_node.css('left', 0)
+		gui_node_body.html(node.title + ', #' + node.id)
+		@appendNode(gui_node, node.relations)
+
+	renderStandardNode: (node) ->
 		gui_node_body = document.createElement('div')
 		gui_node = $('<div></div>')
 		gui_node_body = $(gui_node_body)
@@ -147,8 +198,6 @@ class Gui
 		@canvas.append(node)
 		@prepareNodeTriggers(node)
 		@prepareNodeDrag(node)
-		#if parent != null
-		#	@prepareNodeCurves(node, parent)
 
 	prepareNodeTriggers: (node) ->
 		node.contextmenu( (event) => 
@@ -226,6 +275,7 @@ class Gui
 
 	# enables select node mode
 	selectNodeToSetRelation: (relation_mate_id) ->
+		@showMessage('Please select element which you want to be related with.')
 		$('.map-element-container').not('[data-id='+relation_mate_id+']').hover \
 			( -> 
 				$(this).addClass('highlight') 
@@ -233,14 +283,15 @@ class Gui
 			( -> 
 				$(this).removeClass('highlight') 
 			)
-		$('.map-element-container').not('[data-id='+relation_mate_id+']').click( -> 
-			selected_id = $(this).attr('data-id')
+		$('.map-element-container').not('[data-id='+relation_mate_id+']').click( (event) => 
+			selected_id = $(event.currentTarget).attr('data-id')
 			$('.map-element-container').not('[data-id='+relation_mate_id+']').removeClass('highlight')
 			$('.map-element-container').not('[data-id='+relation_mate_id+']').unbind('hover')
 			$('.map-element-container').not('[data-id='+relation_mate_id+']').unbind('click')
+			@emptySpace.unbind('click')
+			@newRelation( relation_mate_id, selected_id )
 		)
-		@emptySpace.click( (event) => 
-			console.log('test')
+		@emptySpace.click( (event) =>
 			$('.map-element-container').not('[data-id='+relation_mate_id+']').removeClass('highlight')
 			$('.map-element-container').not('[data-id='+relation_mate_id+']').unbind('hover')
 			$('.map-element-container').not('[data-id='+relation_mate_id+']').unbind('click')
@@ -249,6 +300,20 @@ class Gui
 
 	# this triggers usecase to create this relation
 	newRelation: (element_f_id, element_s_id) ->
+
+	# function is enabled after storage saved relation
+	drawRelation: (relation) ->
+		element_f_id = parseInt(relation.elements[0])
+		element_s_id = parseInt(relation.elements[1])
+		relation_label_id = parseInt(relation.label.id)
+		@prepareNodeCurves(
+			element_f_id,
+			relation_label_id
+		)
+		@prepareNodeCurves(
+			element_s_id,
+			relation_label_id
+		)
 
 	removeNode: (node) ->
 		node.remove()
@@ -301,14 +366,15 @@ class Gui
 		@prepareNodeTriggers(node)
 		@prepareNodeDrag(node)
 
-	prepareNodeCurves: (node, parent) ->
+	prepareNodeCurves: (node_id, parent_id) ->
+		node = @canvas.find('.map-element-container[data-id='+node_id+']')
 		node_y = node.offset().top
 		node_x = node.offset().left
-		parent = @canvas.find('.map-element-container[data-id='+parent+']')
+		parent = @canvas.find('.map-element-container[data-id='+parent_id+']')
 		parent_y = parent.offset().top
 		parent_x = parent.offset().left
 		path = @paper.path('M' + parent_x + ' ' + parent_y + 'L' + node_x + ' ' + node_y);
-		@nodeCurvesPrepared [parseInt( node.attr('data-id') ), parseInt( parent.attr('data-id') ), path]
+		@nodeCurvesPrepared [node_id, parent_id, path]
 
 	nodeCurvesPrepared: (pathSet) ->
 
