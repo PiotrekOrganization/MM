@@ -1,2 +1,4 @@
 
 Mindmap/config/database.yml
+
+*.log
