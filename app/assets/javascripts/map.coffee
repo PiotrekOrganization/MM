@@ -102,7 +102,7 @@ class Glue
 		)
 
 		@after(@storage, 'newRelationElementSaved', (relation) ->
-			usecase.drawLine(relation.label.id, relation.elements[1])
+			useCase.drawLine(relation.label.id, relation.elements[1])
 		)
 
 		@after(@useCase, 'drawLine', (element_f, element_s) ->
@@ -115,6 +115,14 @@ class Glue
 
 		@after(@storage, 'nodeRelationsArrayPrepared', (relations) ->
 			gui.showNodeRelationsPopup(relations)
+		)
+
+		@after(@gui, 'updateRelationTitle', (label_id, new_title) ->
+			useCase.updateRelationTitle(parseInt(label_id), new_title)
+		)
+
+		@after(@useCase, 'updateRelationTitle', (label_id, new_title) ->
+			storage.updateRelationTitle(label_id, new_title)
 		)
 
 	before: (object, methodName, adviseMethod) ->
@@ -137,6 +145,10 @@ class UseCase
 	drawRelation: (relation) ->
 
 	drawLine: (element_f, element_s) ->
+
+	updateNodeTitle: (node_id, new_title) ->
+
+	updateRelationTitle: (label_id, new_title) ->
 
 class Storage
 
@@ -233,6 +245,13 @@ class Storage
 		@nodeRelationsArrayPrepared @getRelationByNodeId(node_id)
 
 	nodeRelationsArrayPrepared: (relations) ->
+
+	updateRelationTitle: (label_id, new_title) ->
+		console.log(@relations)
+		for relation in @relations
+			if( relation.label.id == label_id )
+				relation.title = new_title
+				break
 
 class Node
 	constructor: (title, type = 1) -> 
@@ -531,7 +550,6 @@ class Gui
 		children_container.css('bottom', height)
 		#children_container.parent().css('margin-top', height*2)
 
-
 	enableEditMode: (node) ->
 		node.addClass('edit-on')
 		input = $('<input type="text" class="edit-title" value="'+node.find('.map-element').text()+'" />')
@@ -551,7 +569,10 @@ class Gui
 
 	disableEditMode: (node) ->
 		node.removeClass('edit-on')
-		node.find('.map-element').html( node.find('.map-element input.edit-title').val() )
+		new_title = node.find('.map-element input.edit-title').val()
+		node.find('.map-element').html( new_title )
+		type = node.attr('data-type')
+		@updateRelationTitle(node.attr('data-id'), new_title) if type == "2"
 		node.unbind()
 		@prepareNodeTriggers(node)
 		@prepareNodeDrag(node)
@@ -578,6 +599,8 @@ class Gui
 		parent_x = parent.offset().left
 		path = @paper.path('M' + parent_x + ' ' + parent_y + 'L' + node_x + ' ' + node_y);
 		@reDrown [parseInt( node.attr('data-id') ), parseInt( parent.attr('data-id') ), path]
+
+	updateRelationTitle: (label_id, new_title) ->
 
 class Spa
 	constructor: ->
