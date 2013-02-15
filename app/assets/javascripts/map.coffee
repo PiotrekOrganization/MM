@@ -42,6 +42,16 @@ $.extend $.fn,
 				)
 			)
 
+			# close on mask click too
+			mask.click( (event) -> 
+				event.preventDefault()
+				box.fadeOut( 300, ->
+					$(this).remove()
+				)
+				mask.fadeOut( 300, ->
+					$(this).remove()
+				)
+			)
 
 class Glue
 	constructor: (@useCase, @gui, @storage) ->
