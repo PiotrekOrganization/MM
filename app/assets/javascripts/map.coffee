@@ -1,6 +1,48 @@
 auto_id = 0
 auto_id_relations = 0
 
+$.extend $.fn,
+	modalWindow: ->
+		@each ->
+			e = $(this)
+
+			# init DOM elements
+			final_container = e.parent()
+			content = e
+			box = $('<div class="modal-window-box" style="display:none"></div>')
+			mask = $('<div class="modal-window-mask" style="display:none"></div>')
+			close = $('<a href="#" class="modal-window-close">Close</a>')
+
+			# place everything in right container
+			content.prependTo( box )
+			close.prependTo( box )
+			final_container.append( mask )
+			final_container.append( box )
+
+			# fit to screen
+			window_height = $(window).height()
+			box_height = box.height()
+			box.css('top', parseInt( (window_height - box_height) / 3 ) )
+			window_width = $(window).width()
+			box_width = $(box).width()
+			box.css('left', parseInt( (window_width - box_width) / 2 ) )
+
+			# so let's show our stuff
+			box.fadeIn()
+			mask.fadeIn()
+
+			# close button
+			close.click( (event) -> 
+				event.preventDefault()
+				box.fadeOut( 300, ->
+					$(this).remove()
+				)
+				mask.fadeOut( 300, ->
+					$(this).remove()
+				)
+			)
+
+
 class Glue
 	constructor: (@useCase, @gui, @storage) ->
 		gui = @gui
@@ -65,6 +107,14 @@ class Glue
 
 		@after(@useCase, 'drawLine', (element_f, element_s) ->
 			gui.drawLine(element_f, element_s)
+		)
+
+		@after(@gui, 'prepareNodeRelationsPopup', (node_id) ->
+			storage.prepareNodeRelationsArray(parseInt(node_id))
+		)
+
+		@after(@storage, 'nodeRelationsArrayPrepared', (relations) ->
+			gui.showNodeRelationsPopup(relations)
 		)
 
 	before: (object, methodName, adviseMethod) ->
@@ -140,6 +190,17 @@ class Storage
 				return relation
 		return false
 
+	getRelationByNodeId: (node_id) ->
+		resultsArray = []
+		for relation in @relations
+			if(relation.elements[0] == node_id)
+				resultsArray.push { parent: node_id, child: relation.elements[1], title: relation.title}
+			else if(relation.elements[1] == node_id)
+				resultsArray.push { parent: relation.elements[0], child: node_id, title: relation.title }
+		console.log('storage:getRelationByNodeId(' + node_id + ')')
+		console.log(resultsArray)
+		return resultsArray
+
 	getNode: (id) ->
 		for node in @nodes
 			if node.id == id
@@ -160,8 +221,6 @@ class Storage
 	addToRelation: (label_id, node_id) ->
 		relation = @getRelationByLabel(label_id)
 		relation_top_element = relation.elements[0]
-		console.log('node_id:')
-		console.log(node_id)
 		new_relation = new Relation(relation_top_element, node_id, relation.title)
 		new_relation.id = ++auto_id_relations
 		new_relation.label = @getNode(label_id)
@@ -169,7 +228,11 @@ class Storage
 		@newRelationElementSaved(new_relation) # this will enable usecase and gui which will draw lines
 
 	newRelationElementSaved: (relation) ->
-		console.log(relation)
+
+	prepareNodeRelationsArray: (node_id) ->
+		@nodeRelationsArrayPrepared @getRelationByNodeId(node_id)
+
+	nodeRelationsArrayPrepared: (relations) ->
 
 class Node
 	constructor: (title, type = 1) -> 
@@ -192,6 +255,7 @@ class Gui
 		@canvas = $('.map-canvas')
 		@control = $('.control-layer')
 		@lines = $('.lines-layer')
+		@modalWindowSpace = $('.modal-windows-space')
 		@paper = Raphael("draw-paper", $(window).width(), $(window).height())
 		@emptySpace = @lines
 		@helloMessage()
@@ -332,6 +396,11 @@ class Gui
 			menu.parent().remove()
 			@selectNodeToSetRelation(node.attr('data-id'))
 		)
+		menu.find('.show-relations').click( (event) =>
+			event.preventDefault()
+			@prepareNodeRelationsPopup(node.attr('data-id'))
+			menu.parent().remove()
+		)
 
 	# enables select node mode
 	selectNodeToSetRelation: (relation_mate_id) ->
@@ -420,6 +489,21 @@ class Gui
 
 	# this triggers usecase to add element in relation
 	addToRelation: (relation_label_id, node_id) ->
+
+	# this asks storage to send information about node's relations
+	prepareNodeRelationsPopup: (node_id) ->
+
+	# and storage's response lands here
+	showNodeRelationsPopup: (relations) ->
+		console.log('gui:showNodeRelationsPopup')
+		console.log(relations)
+		@openModalWindow( HandlebarsTemplates['relationsTable'](relations: relations) )
+
+	openModalWindow: (content) ->
+		box = $('<div></div>')
+		box.append(content)
+		@modalWindowSpace.append(box)
+		box.modalWindow()
 
 	removeNode: (node) ->
 		node.remove()

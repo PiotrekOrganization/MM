@@ -1,0 +1,22 @@
+<table>
+	<thead>
+		<th>Object name</th>
+		<th>Relation name</th>
+		<th>Role</th>
+	</thead>
+	<tbody>
+		{{#if relations}}
+			{{#each relations}}
+			<tr>
+			<td>{{parent}}</td>
+			<td>{{child}}</td>
+			<td>{{this.title}}</td>
+			</tr>
+			{{/each}}
+		{{else}}
+		<tr>
+		<td colspan="3">No relations</td>
+		</tr>
+		{{/if}}
+	</tbody>
+</table>
