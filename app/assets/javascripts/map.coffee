@@ -59,81 +59,43 @@ class Glue
 		storage = @storage
 		usecase = @useCase
 
-		@after(@useCase, 'createNode', (node) -> 
-			storage.saveNode(node)
-		)
+		@after(@useCase, 'createNode', (node) -> storage.saveNode(node))
 
-		@after(@storage, 'nodeSaved', (node) -> 
-			usecase.showNode(node)
-		)
+		@after(@storage, 'nodeSaved', (node) -> usecase.showNode(node))
 
-		@after(@useCase, 'showNode', (node) -> 
-			gui.renderNode(node)
-		)
+		@after(@useCase, 'showNode', (node) -> gui.renderNode(node))
 
-		@after(@gui, 'newNodePrepared', (node) -> 
-			usecase.createNode(node)
-		)
+		@after(@gui, 'newNodePrepared', (node) -> usecase.createNode(node))
 
-		@after(@gui, 'nodeCurvesPrepared', (pathSet) ->
-			storage.storePath(pathSet)
-		)
+		@after(@gui, 'nodeCurvesPrepared', (pathSet) -> storage.storePath(pathSet))
 
-		@after(@gui, 'nodeDragStartTrigged', (node) ->
-			storage.preparePathsForDrag(node)
-		)
+		@after(@gui, 'nodeDragStartTrigged', (node) -> storage.preparePathsForDrag(node))
 
-		@after(@storage, 'pathsForDragPreapared', (node, paths_array) ->
-			gui.nodeDragEnable(node, paths_array)
-		)
+		@after(@storage, 'pathsForDragPreapared', (node, paths_array) -> gui.nodeDragEnable(node, paths_array))
 
-		@after(@gui, 'reDrown', (pathSet) ->
-			storage.refreshPathObject(pathSet)
-		)
+		@after(@gui, 'reDrown', (pathSet) -> storage.refreshPathObject(pathSet))
 
-		@after(@gui, 'newRelation', (f_id, s_id) ->
-			useCase.createRelation(parseInt(f_id), parseInt(s_id), 'no title') 
-		)
+		@after(@gui, 'newRelation', (f_id, s_id) -> useCase.createRelation(parseInt(f_id), parseInt(s_id), 'no title') )
 	
-		@after(@useCase, 'createRelation', (f_id, s_id, title) ->
-			storage.saveRelation(f_id, s_id, title)
-		)
+		@after(@useCase, 'createRelation', (f_id, s_id, title) -> storage.saveRelation(f_id, s_id, title))
 
-		@after(@storage, 'relationSaved', (relation) ->
-			useCase.drawRelation(relation)
-		)
+		@after(@storage, 'relationSaved', (relation) -> useCase.drawRelation(relation))
 
-		@after(@useCase, 'drawRelation', (relation) ->
-			gui.drawRelation(relation)
-		)
+		@after(@useCase, 'drawRelation', (relation) -> gui.drawRelation(relation))
 
-		@after(@gui, 'addToRelation', (label_id, element_id) ->
-			storage.addToRelation(parseInt(label_id), parseInt(element_id)) 
-		)
+		@after(@gui, 'addToRelation', (label_id, element_id) -> storage.addToRelation(parseInt(label_id), parseInt(element_id)))
 
-		@after(@storage, 'newRelationElementSaved', (relation) ->
-			useCase.drawLine(relation.label.id, relation.elements[1])
-		)
+		@after(@storage, 'newRelationElementSaved', (relation) -> useCase.drawLine(relation.label.id, relation.elements[1]))
 
-		@after(@useCase, 'drawLine', (element_f, element_s) ->
-			gui.drawLine(element_f, element_s)
-		)
+		@after(@useCase, 'drawLine', (element_f, element_s) -> gui.drawLine(element_f, element_s))
 
-		@after(@gui, 'prepareNodeRelationsPopup', (node_id) ->
-			storage.prepareNodeRelationsArray(parseInt(node_id))
-		)
+		@after(@gui, 'prepareNodeRelationsPopup', (node_id) -> storage.prepareNodeRelationsArray(parseInt(node_id)) )
 
-		@after(@storage, 'nodeRelationsArrayPrepared', (relations) ->
-			gui.showNodeRelationsPopup(relations)
-		)
+		@after(@storage, 'nodeRelationsArrayPrepared', (relations) -> gui.showNodeRelationsPopup(relations))
 
-		@after(@gui, 'updateRelationTitle', (label_id, new_title) ->
-			useCase.updateRelationTitle(parseInt(label_id), new_title)
-		)
+		@after(@gui, 'updateRelationTitle', (label_id, new_title) -> useCase.updateRelationTitle(parseInt(label_id), new_title))
 
-		@after(@useCase, 'updateRelationTitle', (label_id, new_title) ->
-			storage.updateRelationTitle(label_id, new_title)
-		)
+		@after(@useCase, 'updateRelationTitle', (label_id, new_title) -> storage.updateRelationTitle(label_id, new_title))
 
 	before: (object, methodName, adviseMethod) ->
 		YouAreDaBomb(object, methodName).before(adviseMethod)
@@ -216,7 +178,7 @@ class Storage
 		resultsArray = []
 		for relation in @relations
 			if(relation.elements[0] == node_id)
-				resultsArray.push { parent: node_id, child: relation.elements[1], title: relation.title}
+				resultsArray.push { parent: node_id, child: relation.elements[1], title: relation.title }
 			else if(relation.elements[1] == node_id)
 				resultsArray.push { parent: relation.elements[0], child: node_id, title: relation.title }
 		console.log('storage:getRelationByNodeId(' + node_id + ')')
@@ -253,15 +215,16 @@ class Storage
 
 	prepareNodeRelationsArray: (node_id) ->
 		@nodeRelationsArrayPrepared @getRelationByNodeId(node_id)
-
+	
 	nodeRelationsArrayPrepared: (relations) ->
 
 	updateRelationTitle: (label_id, new_title) ->
+		console.log('new title: ' + new_title)
 		console.log(@relations)
 		for relation in @relations
 			if( relation.label.id == label_id )
 				relation.title = new_title
-				break
+		@relations
 
 class Node
 	constructor: (title, type = 1) -> 
@@ -553,13 +516,6 @@ class Gui
 
 	newNodePrepared: (node) ->
 
-	fitNodeLayout: (children_container) ->
-		outerHeight = children_container.outerHeight() - children_container.parent().find('> .map-element').outerHeight()
-		console.log(outerHeight)
-		height = (outerHeight/2)*-1
-		children_container.css('bottom', height)
-		#children_container.parent().css('margin-top', height*2)
-
 	enableEditMode: (node) ->
 		node.addClass('edit-on')
 		input = $('<input type="text" class="edit-title" value="'+node.find('.map-element').text()+'" />')
@@ -568,6 +524,7 @@ class Gui
 		input.keydown( (event) =>
 			if(event.keyCode == 13)
 				@disableEditMode(node)
+			$(window).unbind('click')
 		)
 		$(window).click( (event) =>
 			@disableEditMode( node )
@@ -611,6 +568,7 @@ class Gui
 		@reDrown [parseInt( node.attr('data-id') ), parseInt( parent.attr('data-id') ), path]
 
 	updateRelationTitle: (label_id, new_title) ->
+		console.log('gui:updateRelationTitle')
 
 class Spa
 	constructor: ->
