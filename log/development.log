@@ -41207,3 +41207,24 @@ Served asset /templates/relationsTable.js - 304 Not Modified (0ms)
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-17 13:21:50 +0100
 Served asset /application.js - 304 Not Modified (5ms)
 Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (12.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20121217213250)
+Migrating to CreateMaps (20121217215013)
+Migrating to CreateItems (20121217220451)
+Migrating to AddDescriptionToItem (20121217222516)
+Migrating to AddItemIdToItems (20130105115222)
+Migrating to AddNameToItems (20130106130149)
+Migrating to DropItemTable (20130106161056)
+Migrating to NewCreateTableItems (20130106161647)
+Migrating to AddMapIdToItems (20130106215813)
+Migrating to AddNameToMap (20130216203641)
+Migrating to AddUserIdToMap (20130217123332)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (109.0ms)[0m  [1mALTER TABLE "maps" ADD COLUMN "user_id" integer[0m
+  [1m[35m (23.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130217123332')
+  [1m[36m (20.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
