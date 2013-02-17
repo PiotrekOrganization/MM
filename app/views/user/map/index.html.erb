@@ -1,7 +1,7 @@
 
 
 <div class="center-table">
-
+<%= link_to 'new map', new_user_map_path, :class => 'btn btn-warning'%>
 <table class="table view-user-table">
               <thead>
                 <tr>
@@ -19,8 +19,9 @@
                     
                     <td><%= map.name %></td>
                     
-                    <td><%= link_to 'show', user_map_path(map)  , :class => 'btn btn-info' %></td>         
-
+                    <td><%= link_to 'show', user_map_path(map)  , :class => 'btn btn-info' %></td>
+                     <td><%= link_to 'edit', edit_user_map_path(map)  , :class => 'btn btn-info' %></td>            
+                     <td><%= link_to 'delete', user_map_path(map)  , :class => 'btn btn-info' ,:data=>{:method=>:delete, :confirm=>"Are you sure?"} %></td>    
                   </tr>
                 <% end %>
                 
