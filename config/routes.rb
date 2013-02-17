@@ -4,7 +4,8 @@ Mindmap::Application.routes.draw do
   match "/items" => "home#items_json"
 
 
-  namespace :user do
+  namespace :user do  
+  root :to => "map#index"  
     resources :map
   end
 

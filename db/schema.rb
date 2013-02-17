@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130106215813) do
+ActiveRecord::Schema.define(:version => 20130216203641) do
 
   create_table "items", :force => true do |t|
     t.integer "parent_id"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(:version => 20130106215813) do
   create_table "maps", :force => true do |t|
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "name"
   end
 
   create_table "users", :force => true do |t|

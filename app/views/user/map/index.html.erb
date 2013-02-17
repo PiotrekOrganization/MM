@@ -1,0 +1,9 @@
+Wybierz mape :
+
+
+
+<% @maps.each do |map| %>
+<p><%= link_to map.name, user_map_path(map) %></p>
+
+
+<% end %> 

@@ -26,6 +26,7 @@ gem 'acts_as_nested_interval'
 gem 'handlebars'
 gem 'handlebars_assets'
 gem 'twitter-bootstrap-rails'
+gem 'simple_form'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
