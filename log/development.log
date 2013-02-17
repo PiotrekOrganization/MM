@@ -39250,3 +39250,1960 @@ Served asset /templates/relationsTable.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-17 00:11:58 +0100
 Served asset /application.js - 304 Not Modified (4ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-17 13:05:57 +0100
+Processing by HomeController#index as HTML
+  [1m[36mItem Load (14.4ms)[0m  [1mSELECT "items".* FROM "items" [0m
+  [1m[35mMap Load (13.7ms)[0m  SELECT "maps".* FROM "maps" 
+  Rendered home/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 1051ms (Views: 259.2ms | ActiveRecord: 367.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-17 13:05:58 +0100
+Served asset /application.css - 304 Not Modified (20ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-02-17 13:05:58 +0100
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (24ms)
+
+
+Started GET "/assets/handlebars.js?body=1" for 127.0.0.1 at 2013-02-17 13:05:58 +0100
+Served asset /handlebars.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-17 13:05:58 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-02-17 13:05:58 +0100
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-17 13:05:58 +0100
+Served asset /jquery.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/modalwindow.js?body=1" for 127.0.0.1 at 2013-02-17 13:05:58 +0100
+Served asset /modalwindow.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/raphael-min.js?body=1" for 127.0.0.1 at 2013-02-17 13:05:59 +0100
+Served asset /raphael-min.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/templates/contextMenu.js?body=1" for 127.0.0.1 at 2013-02-17 13:05:59 +0100
+Served asset /templates/contextMenu.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/templates/message.js?body=1" for 127.0.0.1 at 2013-02-17 13:05:59 +0100
+Served asset /templates/message.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/YouAreDaBomb.js?body=1" for 127.0.0.1 at 2013-02-17 13:05:59 +0100
+Served asset /YouAreDaBomb.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/templates/relationMenu.js?body=1" for 127.0.0.1 at 2013-02-17 13:05:59 +0100
+Served asset /templates/relationMenu.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/templates/relationsTable.js?body=1" for 127.0.0.1 at 2013-02-17 13:05:59 +0100
+Served asset /templates/relationsTable.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-17 13:05:59 +0100
+Served asset /application.js - 304 Not Modified (58ms)
+
+
+Started GET "/user/" for 127.0.0.1 at 2013-02-17 13:06:03 +0100
+Processing by User::MapController#index as HTML
+Completed 401 Unauthorized in 59ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-02-17 13:06:03 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/devise-2.1.2/app/views/devise/shared/_links.erb (2.2ms)
+  Rendered /home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/devise-2.1.2/app/views/devise/sessions/new.html.erb within layouts/application (66.3ms)
+Completed 200 OK in 127ms (Views: 94.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-17 13:06:03 +0100
+Served asset /application.css - 304 Not Modified (18ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-17 13:06:03 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-02-17 13:06:03 +0100
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-17 13:06:03 +0100
+Served asset /jquery.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-02-17 13:06:03 +0100
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/handlebars.js?body=1" for 127.0.0.1 at 2013-02-17 13:06:03 +0100
+Served asset /handlebars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/YouAreDaBomb.js?body=1" for 127.0.0.1 at 2013-02-17 13:06:03 +0100
+Served asset /YouAreDaBomb.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modalwindow.js?body=1" for 127.0.0.1 at 2013-02-17 13:06:03 +0100
+Served asset /modalwindow.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/raphael-min.js?body=1" for 127.0.0.1 at 2013-02-17 13:06:03 +0100
+Served asset /raphael-min.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/templates/contextMenu.js?body=1" for 127.0.0.1 at 2013-02-17 13:06:03 +0100
+Served asset /templates/contextMenu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/message.js?body=1" for 127.0.0.1 at 2013-02-17 13:06:03 +0100
+Served asset /templates/message.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/relationMenu.js?body=1" for 127.0.0.1 at 2013-02-17 13:06:03 +0100
+Served asset /templates/relationMenu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/relationsTable.js?body=1" for 127.0.0.1 at 2013-02-17 13:06:03 +0100
+Served asset /templates/relationsTable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-17 13:06:03 +0100
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-02-17 13:06:10 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MrWlmKmcEGJfGFkatKqNEhUln77YnI+duZjdQAD8xio=", "user"=>{"email"=>"rafkow9@wp.pl", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (59.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'rafkow9@wp.pl' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (10.1ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = '2013-02-17 12:06:11.050531', "sign_in_count" = 2, "updated_at" = '2013-02-17 12:06:11.075716' WHERE "users"."id" = 1[0m
+  [1m[35m (12.9ms)[0m  COMMIT
+Redirected to http://0.0.0.0:3000/user
+Completed 302 Found in 548ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user" for 127.0.0.1 at 2013-02-17 13:06:11 +0100
+Processing by User::MapController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mMap Load (0.2ms)[0m  SELECT "maps".* FROM "maps" 
+  Rendered user/map/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 52ms (Views: 49.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-17 13:06:11 +0100
+Served asset /application.css - 304 Not Modified (18ms)
+
+
+Started GET "/assets/handlebars.js?body=1" for 127.0.0.1 at 2013-02-17 13:06:11 +0100
+Served asset /handlebars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-17 13:06:11 +0100
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-02-17 13:06:11 +0100
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-02-17 13:06:11 +0100
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-17 13:06:11 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/YouAreDaBomb.js?body=1" for 127.0.0.1 at 2013-02-17 13:06:11 +0100
+Served asset /YouAreDaBomb.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/modalwindow.js?body=1" for 127.0.0.1 at 2013-02-17 13:06:11 +0100
+Served asset /modalwindow.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/raphael-min.js?body=1" for 127.0.0.1 at 2013-02-17 13:06:11 +0100
+Served asset /raphael-min.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/templates/contextMenu.js?body=1" for 127.0.0.1 at 2013-02-17 13:06:11 +0100
+Served asset /templates/contextMenu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/message.js?body=1" for 127.0.0.1 at 2013-02-17 13:06:11 +0100
+Served asset /templates/message.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/relationMenu.js?body=1" for 127.0.0.1 at 2013-02-17 13:06:11 +0100
+Served asset /templates/relationMenu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/relationsTable.js?body=1" for 127.0.0.1 at 2013-02-17 13:06:11 +0100
+Served asset /templates/relationsTable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-17 13:06:11 +0100
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/user" for 127.0.0.1 at 2013-02-17 13:07:11 +0100
+Processing by User::MapController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mMap Load (0.5ms)[0m  SELECT "maps".* FROM "maps" 
+ERROR: compiling _app_views_user_map_index_html_erb___824854610353864634_70004745749960 RAISED /home/rafa/Pulpit/mindmap/MM/app/views/user/map/index.html.erb:22: syntax error, unexpected ',', expecting ')'
+...output_buffer.append= ( 'show', user_map_path(map)  , :class...
+...                               ^
+/home/rafa/Pulpit/mindmap/MM/app/views/user/map/index.html.erb:22: syntax error, unexpected ',', expecting ')'
+...( 'show', user_map_path(map)  , :class => :btn );@output_buf...
+...                               ^
+Function body:           def _app_views_user_map_index_html_erb___824854610353864634_70004745749960(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "user/map/index";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('
+
+
+
+<table class="table view-user">
+              <thead>
+                <tr>
+                  
+                  
+                  <th>Map name</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+
+              <tbody>
+');                 @maps.each do |map| 
+@output_buffer.safe_concat('                  <tr>
+
+                    
+                    <td>');@output_buffer.append= ( map.name );@output_buffer.safe_concat('</td>
+                    
+                    <td>');@output_buffer.append= ( 'show', user_map_path(map)  , :class => :btn );@output_buffer.safe_concat('</td>         
+
+                  </tr>
+');                 end 
+@output_buffer.safe_concat('                
+              </tbody>
+</table>');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_view/template.rb:297:in `module_eval'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_view/template.rb:297:in `compile'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_view/template.rb:244:in `block in compile!'
+<internal:prelude>:10:in `synchronize'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_view/template.rb:232:in `compile!'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_view/template.rb:144:in `block in render'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/notifications.rb:125:in `instrument'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_view/template.rb:143:in `render'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/notifications.rb:123:in `block in instrument'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/notifications.rb:123:in `instrument'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_view/renderer/template_renderer.rb:18:in `render'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_view/renderer/renderer.rb:17:in `render'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/abstract_controller/rendering.rb:110:in `_render_template'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/abstract_controller/rendering.rb:88:in `render'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/rafa/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activerecord-3.2.9/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/abstract_controller/base.rb:167:in `process_action'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:425:in `_run__979130587416247657__process_action__4072522929228896427__callbacks'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:405:in `__run_callback'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/notifications.rb:123:in `block in instrument'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/notifications.rb:123:in `instrument'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activerecord-3.2.9/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/abstract_controller/base.rb:121:in `process'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/abstract_controller/rendering.rb:45:in `process'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal.rb:203:in `dispatch'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal.rb:246:in `block in action'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/routing/route_set.rb:73:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/routing/route_set.rb:36:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/routing/route_set.rb:601:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/warden-1.2.1/lib/warden/manager.rb:35:in `block in call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/warden-1.2.1/lib/warden/manager.rb:34:in `catch'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/warden-1.2.1/lib/warden/manager.rb:34:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.1/lib/rack/etag.rb:23:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.1/lib/rack/conditionalget.rb:25:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:205:in `context'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:200:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activerecord-3.2.9/lib/active_record/query_cache.rb:64:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activerecord-3.2.9/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:405:in `_run__3076250011298904838__call__2426195307373515432__callbacks'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:405:in `__run_callback'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/railties-3.2.9/lib/rails/rack/logger.rb:32:in `call_app'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/railties-3.2.9/lib/rails/rack/logger.rb:16:in `block in call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/tagged_logging.rb:22:in `tagged'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/railties-3.2.9/lib/rails/rack/logger.rb:16:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.1/lib/rack/methodoverride.rb:21:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.1/lib/rack/runtime.rb:17:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.1/lib/rack/lock.rb:15:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/middleware/static.rb:62:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/railties-3.2.9/lib/rails/engine.rb:479:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/railties-3.2.9/lib/rails/application.rb:223:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.1/lib/rack/content_length.rb:14:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/railties-3.2.9/lib/rails/rack/log_tailer.rb:17:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.1/lib/rack/handler/webrick.rb:59:in `service'
+/home/rafa/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/home/rafa/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/home/rafa/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+  Rendered user/map/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (/home/rafa/Pulpit/mindmap/MM/app/views/user/map/index.html.erb:22: syntax error, unexpected ',', expecting ')'
+...output_buffer.append= ( 'show', user_map_path(map)  , :class...
+...                               ^
+/home/rafa/Pulpit/mindmap/MM/app/views/user/map/index.html.erb:22: syntax error, unexpected ',', expecting ')'
+...( 'show', user_map_path(map)  , :class => :btn );@output_buf...
+...                               ^):
+    19:                     
+    20:                     <td><%= map.name %></td>
+    21:                     
+    22:                     <td><%= 'show', user_map_path(map)  , :class => :btn %></td>         
+    23: 
+    24:                   </tr>
+    25:                 <% end %>
+  actionpack (3.2.9) lib/action_view/template.rb:297:in `module_eval'
+  actionpack (3.2.9) lib/action_view/template.rb:297:in `compile'
+  actionpack (3.2.9) lib/action_view/template.rb:244:in `block in compile!'
+  <internal:prelude>:10:in `synchronize'
+  actionpack (3.2.9) lib/action_view/template.rb:232:in `compile!'
+  actionpack (3.2.9) lib/action_view/template.rb:144:in `block in render'
+  activesupport (3.2.9) lib/active_support/notifications.rb:125:in `instrument'
+  actionpack (3.2.9) lib/action_view/template.rb:143:in `render'
+  actionpack (3.2.9) lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+  actionpack (3.2.9) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (3.2.9) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.9) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.9) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.9) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (3.2.9) lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+  actionpack (3.2.9) lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+  actionpack (3.2.9) lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  actionpack (3.2.9) lib/action_view/renderer/template_renderer.rb:18:in `render'
+  actionpack (3.2.9) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.9) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.9) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.9) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.9) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.9) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.9) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.9) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.9) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.9) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.9) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /home/rafa/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+  activesupport (3.2.9) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.9) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.9) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.9) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.9) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.9) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.9) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.9) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.9) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.9) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:425:in `_run__979130587416247657__process_action__4072522929228896427__callbacks'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.9) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.9) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.9) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.9) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.9) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.9) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.9) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.9) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.9) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.9) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.9) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.9) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.9) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.9) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.9) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.9) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.9) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.9) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  warden (1.2.1) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.1) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.1) lib/warden/manager.rb:34:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.9) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:405:in `_run__3076250011298904838__call__2426195307373515432__callbacks'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.9) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/rafa/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/rafa/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/rafa/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.0ms)
+
+
+Started GET "/user" for 127.0.0.1 at 2013-02-17 13:07:38 +0100
+Processing by User::MapController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mMap Load (0.4ms)[0m  SELECT "maps".* FROM "maps" 
+  Rendered user/map/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 23ms (Views: 19.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-17 13:07:38 +0100
+Served asset /application.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-02-17 13:07:38 +0100
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-02-17 13:07:38 +0100
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-17 13:07:38 +0100
+Served asset /jquery.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/handlebars.js?body=1" for 127.0.0.1 at 2013-02-17 13:07:38 +0100
+Served asset /handlebars.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-17 13:07:38 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/YouAreDaBomb.js?body=1" for 127.0.0.1 at 2013-02-17 13:07:38 +0100
+Served asset /YouAreDaBomb.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modalwindow.js?body=1" for 127.0.0.1 at 2013-02-17 13:07:38 +0100
+Served asset /modalwindow.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/raphael-min.js?body=1" for 127.0.0.1 at 2013-02-17 13:07:38 +0100
+Served asset /raphael-min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/contextMenu.js?body=1" for 127.0.0.1 at 2013-02-17 13:07:38 +0100
+Served asset /templates/contextMenu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/message.js?body=1" for 127.0.0.1 at 2013-02-17 13:07:38 +0100
+Served asset /templates/message.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/relationMenu.js?body=1" for 127.0.0.1 at 2013-02-17 13:07:38 +0100
+Served asset /templates/relationMenu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/relationsTable.js?body=1" for 127.0.0.1 at 2013-02-17 13:07:38 +0100
+Served asset /templates/relationsTable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-17 13:07:38 +0100
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/user" for 127.0.0.1 at 2013-02-17 13:08:44 +0100
+Processing by User::MapController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mMap Load (0.4ms)[0m  SELECT "maps".* FROM "maps" 
+  Rendered user/map/index.html.erb within layouts/application (37.4ms)
+Compiled application.css  (6ms)  (pid 3317)
+Completed 200 OK in 76ms (Views: 72.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-17 13:08:44 +0100
+Served asset /application.css - 200 OK (24ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-02-17 13:08:44 +0100
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-02-17 13:08:44 +0100
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-17 13:08:44 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars.js?body=1" for 127.0.0.1 at 2013-02-17 13:08:44 +0100
+Served asset /handlebars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-17 13:08:44 +0100
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/modalwindow.js?body=1" for 127.0.0.1 at 2013-02-17 13:08:44 +0100
+Served asset /modalwindow.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/YouAreDaBomb.js?body=1" for 127.0.0.1 at 2013-02-17 13:08:44 +0100
+Served asset /YouAreDaBomb.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/raphael-min.js?body=1" for 127.0.0.1 at 2013-02-17 13:08:44 +0100
+Served asset /raphael-min.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/templates/contextMenu.js?body=1" for 127.0.0.1 at 2013-02-17 13:08:44 +0100
+Served asset /templates/contextMenu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/message.js?body=1" for 127.0.0.1 at 2013-02-17 13:08:44 +0100
+Served asset /templates/message.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/relationMenu.js?body=1" for 127.0.0.1 at 2013-02-17 13:08:44 +0100
+Served asset /templates/relationMenu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/relationsTable.js?body=1" for 127.0.0.1 at 2013-02-17 13:08:44 +0100
+Served asset /templates/relationsTable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-17 13:08:44 +0100
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/user" for 127.0.0.1 at 2013-02-17 13:08:53 +0100
+Processing by User::MapController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mMap Load (0.3ms)[0m  SELECT "maps".* FROM "maps" 
+  Rendered user/map/index.html.erb within layouts/application (1.3ms)
+Compiled application.css  (5ms)  (pid 3317)
+Completed 200 OK in 75ms (Views: 70.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-17 13:08:53 +0100
+Served asset /application.css - 200 OK (47ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-17 13:08:53 +0100
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-02-17 13:08:53 +0100
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/handlebars.js?body=1" for 127.0.0.1 at 2013-02-17 13:08:53 +0100
+Served asset /handlebars.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-02-17 13:08:53 +0100
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-17 13:08:53 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/YouAreDaBomb.js?body=1" for 127.0.0.1 at 2013-02-17 13:08:53 +0100
+Served asset /YouAreDaBomb.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modalwindow.js?body=1" for 127.0.0.1 at 2013-02-17 13:08:53 +0100
+Served asset /modalwindow.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/raphael-min.js?body=1" for 127.0.0.1 at 2013-02-17 13:08:53 +0100
+Served asset /raphael-min.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/templates/contextMenu.js?body=1" for 127.0.0.1 at 2013-02-17 13:08:53 +0100
+Served asset /templates/contextMenu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/relationsTable.js?body=1" for 127.0.0.1 at 2013-02-17 13:08:53 +0100
+Served asset /templates/relationsTable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/relationMenu.js?body=1" for 127.0.0.1 at 2013-02-17 13:08:53 +0100
+Served asset /templates/relationMenu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/message.js?body=1" for 127.0.0.1 at 2013-02-17 13:08:53 +0100
+Served asset /templates/message.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-17 13:08:53 +0100
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/user" for 127.0.0.1 at 2013-02-17 13:09:06 +0100
+Processing by User::MapController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mMap Load (0.3ms)[0m  SELECT "maps".* FROM "maps" 
+  Rendered user/map/index.html.erb within layouts/application (2.1ms)
+Compiled application.css  (5ms)  (pid 3317)
+Completed 200 OK in 75ms (Views: 69.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-17 13:09:07 +0100
+Served asset /application.css - 200 OK (31ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-02-17 13:09:07 +0100
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-17 13:09:07 +0100
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-02-17 13:09:07 +0100
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/handlebars.js?body=1" for 127.0.0.1 at 2013-02-17 13:09:07 +0100
+Served asset /handlebars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-17 13:09:07 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/YouAreDaBomb.js?body=1" for 127.0.0.1 at 2013-02-17 13:09:07 +0100
+Served asset /YouAreDaBomb.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modalwindow.js?body=1" for 127.0.0.1 at 2013-02-17 13:09:07 +0100
+Served asset /modalwindow.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/raphael-min.js?body=1" for 127.0.0.1 at 2013-02-17 13:09:07 +0100
+Served asset /raphael-min.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/templates/contextMenu.js?body=1" for 127.0.0.1 at 2013-02-17 13:09:07 +0100
+Served asset /templates/contextMenu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/message.js?body=1" for 127.0.0.1 at 2013-02-17 13:09:07 +0100
+Served asset /templates/message.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/relationMenu.js?body=1" for 127.0.0.1 at 2013-02-17 13:09:07 +0100
+Served asset /templates/relationMenu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/relationsTable.js?body=1" for 127.0.0.1 at 2013-02-17 13:09:07 +0100
+Served asset /templates/relationsTable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-17 13:09:07 +0100
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/user/map/3" for 127.0.0.1 at 2013-02-17 13:10:01 +0100
+Processing by User::MapController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mMap Load (20.8ms)[0m  SELECT "maps".* FROM "maps" WHERE "maps"."id" = $1 LIMIT 1  [["id", "3"]]
+  Rendered user/map/show.html.erb within layouts/map (1.2ms)
+Completed 200 OK in 53ms (Views: 27.8ms | ActiveRecord: 21.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-17 13:10:01 +0100
+Served asset /application.css - 304 Not Modified (17ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-17 13:10:01 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-02-17 13:10:01 +0100
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-17 13:10:01 +0100
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-02-17 13:10:01 +0100
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/handlebars.js?body=1" for 127.0.0.1 at 2013-02-17 13:10:01 +0100
+Served asset /handlebars.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/YouAreDaBomb.js?body=1" for 127.0.0.1 at 2013-02-17 13:10:01 +0100
+Served asset /YouAreDaBomb.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modalwindow.js?body=1" for 127.0.0.1 at 2013-02-17 13:10:01 +0100
+Served asset /modalwindow.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/raphael-min.js?body=1" for 127.0.0.1 at 2013-02-17 13:10:01 +0100
+Served asset /raphael-min.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/templates/contextMenu.js?body=1" for 127.0.0.1 at 2013-02-17 13:10:01 +0100
+Served asset /templates/contextMenu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/message.js?body=1" for 127.0.0.1 at 2013-02-17 13:10:01 +0100
+Served asset /templates/message.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/relationMenu.js?body=1" for 127.0.0.1 at 2013-02-17 13:10:01 +0100
+Served asset /templates/relationMenu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/relationsTable.js?body=1" for 127.0.0.1 at 2013-02-17 13:10:01 +0100
+Served asset /templates/relationsTable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-17 13:10:01 +0100
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/map.js?body=1" for 127.0.0.1 at 2013-02-17 13:10:01 +0100
+Served asset /map.js - 304 Not Modified (2ms)
+
+
+Started GET "/user/map/2" for 127.0.0.1 at 2013-02-17 13:10:03 +0100
+Processing by User::MapController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mMap Load (0.2ms)[0m  SELECT "maps".* FROM "maps" WHERE "maps"."id" = $1 LIMIT 1  [["id", "2"]]
+  Rendered user/map/show.html.erb within layouts/map (0.0ms)
+Completed 200 OK in 19ms (Views: 16.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-17 13:10:03 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/handlebars.js?body=1" for 127.0.0.1 at 2013-02-17 13:10:03 +0100
+Served asset /handlebars.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-17 13:10:03 +0100
+Served asset /jquery.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-17 13:10:03 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-02-17 13:10:03 +0100
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-02-17 13:10:03 +0100
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/YouAreDaBomb.js?body=1" for 127.0.0.1 at 2013-02-17 13:10:03 +0100
+Served asset /YouAreDaBomb.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modalwindow.js?body=1" for 127.0.0.1 at 2013-02-17 13:10:03 +0100
+Served asset /modalwindow.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/raphael-min.js?body=1" for 127.0.0.1 at 2013-02-17 13:10:03 +0100
+Served asset /raphael-min.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/templates/contextMenu.js?body=1" for 127.0.0.1 at 2013-02-17 13:10:03 +0100
+Served asset /templates/contextMenu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/message.js?body=1" for 127.0.0.1 at 2013-02-17 13:10:03 +0100
+Served asset /templates/message.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/relationMenu.js?body=1" for 127.0.0.1 at 2013-02-17 13:10:03 +0100
+Served asset /templates/relationMenu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/relationsTable.js?body=1" for 127.0.0.1 at 2013-02-17 13:10:03 +0100
+Served asset /templates/relationsTable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-17 13:10:03 +0100
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/map.js?body=1" for 127.0.0.1 at 2013-02-17 13:10:03 +0100
+Served asset /map.js - 304 Not Modified (0ms)
+
+
+Started GET "/user" for 127.0.0.1 at 2013-02-17 13:11:32 +0100
+Processing by User::MapController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mMap Load (0.5ms)[0m  SELECT "maps".* FROM "maps" 
+  Rendered user/map/index.html.erb within layouts/application (1.5ms)
+Compiled application.css  (38ms)  (pid 3317)
+Completed 200 OK in 72ms (Views: 66.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-17 13:11:32 +0100
+Served asset /application.css - 200 OK (15ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-02-17 13:11:32 +0100
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-02-17 13:11:32 +0100
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-17 13:11:32 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-17 13:11:32 +0100
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/handlebars.js?body=1" for 127.0.0.1 at 2013-02-17 13:11:32 +0100
+Served asset /handlebars.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/YouAreDaBomb.js?body=1" for 127.0.0.1 at 2013-02-17 13:11:32 +0100
+Served asset /YouAreDaBomb.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modalwindow.js?body=1" for 127.0.0.1 at 2013-02-17 13:11:32 +0100
+Served asset /modalwindow.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/raphael-min.js?body=1" for 127.0.0.1 at 2013-02-17 13:11:32 +0100
+Served asset /raphael-min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/contextMenu.js?body=1" for 127.0.0.1 at 2013-02-17 13:11:32 +0100
+Served asset /templates/contextMenu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/message.js?body=1" for 127.0.0.1 at 2013-02-17 13:11:32 +0100
+Served asset /templates/message.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/relationMenu.js?body=1" for 127.0.0.1 at 2013-02-17 13:11:32 +0100
+Served asset /templates/relationMenu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/relationsTable.js?body=1" for 127.0.0.1 at 2013-02-17 13:11:32 +0100
+Served asset /templates/relationsTable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-17 13:11:32 +0100
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/user" for 127.0.0.1 at 2013-02-17 13:11:49 +0100
+Processing by User::MapController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mMap Load (0.5ms)[0m  SELECT "maps".* FROM "maps" 
+  Rendered user/map/index.html.erb within layouts/application (0.9ms)
+Compiled application.css  (6ms)  (pid 3317)
+Completed 200 OK in 72ms (Views: 67.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-17 13:11:49 +0100
+Served asset /application.css - 200 OK (51ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-02-17 13:11:49 +0100
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-02-17 13:11:49 +0100
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-17 13:11:49 +0100
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/handlebars.js?body=1" for 127.0.0.1 at 2013-02-17 13:11:49 +0100
+Served asset /handlebars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-17 13:11:49 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modalwindow.js?body=1" for 127.0.0.1 at 2013-02-17 13:11:49 +0100
+Served asset /modalwindow.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/YouAreDaBomb.js?body=1" for 127.0.0.1 at 2013-02-17 13:11:49 +0100
+Served asset /YouAreDaBomb.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/raphael-min.js?body=1" for 127.0.0.1 at 2013-02-17 13:11:49 +0100
+Served asset /raphael-min.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/templates/contextMenu.js?body=1" for 127.0.0.1 at 2013-02-17 13:11:49 +0100
+Served asset /templates/contextMenu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/message.js?body=1" for 127.0.0.1 at 2013-02-17 13:11:49 +0100
+Served asset /templates/message.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/relationMenu.js?body=1" for 127.0.0.1 at 2013-02-17 13:11:49 +0100
+Served asset /templates/relationMenu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/relationsTable.js?body=1" for 127.0.0.1 at 2013-02-17 13:11:49 +0100
+Served asset /templates/relationsTable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-17 13:11:49 +0100
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/user" for 127.0.0.1 at 2013-02-17 13:12:00 +0100
+Processing by User::MapController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mMap Load (0.5ms)[0m  SELECT "maps".* FROM "maps" 
+  Rendered user/map/index.html.erb within layouts/application (0.8ms)
+Compiled application.css  (8ms)  (pid 3317)
+Completed 200 OK in 76ms (Views: 71.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-02-17 13:12:00 +0100
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-17 13:12:00 +0100
+Served asset /application.css - 200 OK (41ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-02-17 13:12:00 +0100
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-17 13:12:00 +0100
+Served asset /jquery.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-17 13:12:00 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars.js?body=1" for 127.0.0.1 at 2013-02-17 13:12:00 +0100
+Served asset /handlebars.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/YouAreDaBomb.js?body=1" for 127.0.0.1 at 2013-02-17 13:12:00 +0100
+Served asset /YouAreDaBomb.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/modalwindow.js?body=1" for 127.0.0.1 at 2013-02-17 13:12:00 +0100
+Served asset /modalwindow.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/raphael-min.js?body=1" for 127.0.0.1 at 2013-02-17 13:12:00 +0100
+Served asset /raphael-min.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/templates/contextMenu.js?body=1" for 127.0.0.1 at 2013-02-17 13:12:00 +0100
+Served asset /templates/contextMenu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/message.js?body=1" for 127.0.0.1 at 2013-02-17 13:12:00 +0100
+Served asset /templates/message.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/relationMenu.js?body=1" for 127.0.0.1 at 2013-02-17 13:12:00 +0100
+Served asset /templates/relationMenu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/relationsTable.js?body=1" for 127.0.0.1 at 2013-02-17 13:12:00 +0100
+Served asset /templates/relationsTable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-17 13:12:00 +0100
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/user" for 127.0.0.1 at 2013-02-17 13:12:57 +0100
+Processing by User::MapController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mMap Load (0.2ms)[0m  SELECT "maps".* FROM "maps" 
+ERROR: compiling _app_views_user_map_index_html_erb___824854610353864634_70004779472980 RAISED /home/rafa/Pulpit/mindmap/MM/app/views/user/map/index.html.erb:22: syntax error, unexpected ':', expecting ')'
+...p_path(map)  , :class => :btn :btn-info);@output_buffer.safe...
+...                               ^
+Function body:           def _app_views_user_map_index_html_erb___824854610353864634_70004779472980(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "user/map/index";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('
+
+<div class="center-table">
+
+<table class="table view-user-table">
+              <thead>
+                <tr>
+                  
+                  
+                  <th>Map name</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+
+              <tbody>
+');                 @maps.each do |map| 
+@output_buffer.safe_concat('                  <tr>
+
+                    
+                    <td>');@output_buffer.append= ( map.name );@output_buffer.safe_concat('</td>
+                    
+                    <td>');@output_buffer.append= ( link_to 'show', user_map_path(map)  , :class => :btn :btn-info);@output_buffer.safe_concat('</td>         
+
+                  </tr>
+');                 end 
+@output_buffer.safe_concat('                
+              </tbody>
+</table>
+<div>');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_view/template.rb:297:in `module_eval'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_view/template.rb:297:in `compile'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_view/template.rb:244:in `block in compile!'
+<internal:prelude>:10:in `synchronize'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_view/template.rb:232:in `compile!'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_view/template.rb:144:in `block in render'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/notifications.rb:125:in `instrument'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_view/template.rb:143:in `render'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/notifications.rb:123:in `block in instrument'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/notifications.rb:123:in `instrument'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_view/renderer/template_renderer.rb:18:in `render'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_view/renderer/renderer.rb:17:in `render'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/abstract_controller/rendering.rb:110:in `_render_template'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/abstract_controller/rendering.rb:88:in `render'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/rafa/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activerecord-3.2.9/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/abstract_controller/base.rb:167:in `process_action'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:425:in `_run__979130587416247657__process_action__4072522929228896427__callbacks'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:405:in `__run_callback'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/notifications.rb:123:in `block in instrument'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/notifications.rb:123:in `instrument'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activerecord-3.2.9/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/abstract_controller/base.rb:121:in `process'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/abstract_controller/rendering.rb:45:in `process'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal.rb:203:in `dispatch'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal.rb:246:in `block in action'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/routing/route_set.rb:73:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/routing/route_set.rb:36:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/routing/route_set.rb:601:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/warden-1.2.1/lib/warden/manager.rb:35:in `block in call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/warden-1.2.1/lib/warden/manager.rb:34:in `catch'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/warden-1.2.1/lib/warden/manager.rb:34:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.1/lib/rack/etag.rb:23:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.1/lib/rack/conditionalget.rb:25:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:205:in `context'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:200:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activerecord-3.2.9/lib/active_record/query_cache.rb:64:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activerecord-3.2.9/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:405:in `_run__3076250011298904838__call__2426195307373515432__callbacks'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:405:in `__run_callback'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/railties-3.2.9/lib/rails/rack/logger.rb:32:in `call_app'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/railties-3.2.9/lib/rails/rack/logger.rb:16:in `block in call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/tagged_logging.rb:22:in `tagged'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/railties-3.2.9/lib/rails/rack/logger.rb:16:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.1/lib/rack/methodoverride.rb:21:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.1/lib/rack/runtime.rb:17:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.1/lib/rack/lock.rb:15:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/middleware/static.rb:62:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/railties-3.2.9/lib/rails/engine.rb:479:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/railties-3.2.9/lib/rails/application.rb:223:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.1/lib/rack/content_length.rb:14:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/railties-3.2.9/lib/rails/rack/log_tailer.rb:17:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.1/lib/rack/handler/webrick.rb:59:in `service'
+/home/rafa/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/home/rafa/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/home/rafa/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+  Rendered user/map/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (/home/rafa/Pulpit/mindmap/MM/app/views/user/map/index.html.erb:22: syntax error, unexpected ':', expecting ')'
+...p_path(map)  , :class => :btn :btn-info);@output_buffer.safe...
+...                               ^):
+    19:                     
+    20:                     <td><%= map.name %></td>
+    21:                     
+    22:                     <td><%= link_to 'show', user_map_path(map)  , :class => :btn :btn-info%></td>         
+    23: 
+    24:                   </tr>
+    25:                 <% end %>
+  actionpack (3.2.9) lib/action_view/template.rb:297:in `module_eval'
+  actionpack (3.2.9) lib/action_view/template.rb:297:in `compile'
+  actionpack (3.2.9) lib/action_view/template.rb:244:in `block in compile!'
+  <internal:prelude>:10:in `synchronize'
+  actionpack (3.2.9) lib/action_view/template.rb:232:in `compile!'
+  actionpack (3.2.9) lib/action_view/template.rb:144:in `block in render'
+  activesupport (3.2.9) lib/active_support/notifications.rb:125:in `instrument'
+  actionpack (3.2.9) lib/action_view/template.rb:143:in `render'
+  actionpack (3.2.9) lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+  actionpack (3.2.9) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (3.2.9) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.9) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.9) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.9) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (3.2.9) lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+  actionpack (3.2.9) lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+  actionpack (3.2.9) lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  actionpack (3.2.9) lib/action_view/renderer/template_renderer.rb:18:in `render'
+  actionpack (3.2.9) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.9) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.9) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.9) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.9) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.9) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.9) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.9) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.9) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.9) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.9) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /home/rafa/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+  activesupport (3.2.9) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.9) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.9) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.9) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.9) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.9) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.9) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.9) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.9) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.9) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:425:in `_run__979130587416247657__process_action__4072522929228896427__callbacks'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.9) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.9) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.9) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.9) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.9) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.9) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.9) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.9) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.9) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.9) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.9) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.9) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.9) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.9) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.9) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.9) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.9) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.9) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  warden (1.2.1) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.1) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.1) lib/warden/manager.rb:34:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.9) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:405:in `_run__3076250011298904838__call__2426195307373515432__callbacks'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.9) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/rafa/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/rafa/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/rafa/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.3ms)
+
+
+Started GET "/user" for 127.0.0.1 at 2013-02-17 13:13:04 +0100
+Processing by User::MapController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mMap Load (0.2ms)[0m  SELECT "maps".* FROM "maps" 
+ERROR: compiling _app_views_user_map_index_html_erb___824854610353864634_70004712586420 RAISED /home/rafa/Pulpit/mindmap/MM/app/views/user/map/index.html.erb:22: syntax error, unexpected tIDENTIFIER, expecting ')'
+...path(map)  , :class => :btn btn-info );@output_buffer.safe_c...
+...                               ^
+Function body:           def _app_views_user_map_index_html_erb___824854610353864634_70004712586420(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "user/map/index";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('
+
+<div class="center-table">
+
+<table class="table view-user-table">
+              <thead>
+                <tr>
+                  
+                  
+                  <th>Map name</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+
+              <tbody>
+');                 @maps.each do |map| 
+@output_buffer.safe_concat('                  <tr>
+
+                    
+                    <td>');@output_buffer.append= ( map.name );@output_buffer.safe_concat('</td>
+                    
+                    <td>');@output_buffer.append= ( link_to 'show', user_map_path(map)  , :class => :btn btn-info );@output_buffer.safe_concat('</td>         
+
+                  </tr>
+');                 end 
+@output_buffer.safe_concat('                
+              </tbody>
+</table>
+<div>');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_view/template.rb:297:in `module_eval'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_view/template.rb:297:in `compile'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_view/template.rb:244:in `block in compile!'
+<internal:prelude>:10:in `synchronize'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_view/template.rb:232:in `compile!'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_view/template.rb:144:in `block in render'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/notifications.rb:125:in `instrument'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_view/template.rb:143:in `render'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/notifications.rb:123:in `block in instrument'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/notifications.rb:123:in `instrument'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_view/renderer/template_renderer.rb:18:in `render'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_view/renderer/renderer.rb:17:in `render'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/abstract_controller/rendering.rb:110:in `_render_template'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/abstract_controller/rendering.rb:88:in `render'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/rafa/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activerecord-3.2.9/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/abstract_controller/base.rb:167:in `process_action'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:425:in `_run__979130587416247657__process_action__4072522929228896427__callbacks'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:405:in `__run_callback'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/notifications.rb:123:in `block in instrument'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/notifications.rb:123:in `instrument'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activerecord-3.2.9/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/abstract_controller/base.rb:121:in `process'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/abstract_controller/rendering.rb:45:in `process'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal.rb:203:in `dispatch'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_controller/metal.rb:246:in `block in action'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/routing/route_set.rb:73:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/routing/route_set.rb:36:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/routing/route_set.rb:601:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/warden-1.2.1/lib/warden/manager.rb:35:in `block in call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/warden-1.2.1/lib/warden/manager.rb:34:in `catch'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/warden-1.2.1/lib/warden/manager.rb:34:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.1/lib/rack/etag.rb:23:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.1/lib/rack/conditionalget.rb:25:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:205:in `context'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:200:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activerecord-3.2.9/lib/active_record/query_cache.rb:64:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activerecord-3.2.9/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:405:in `_run__3076250011298904838__call__2426195307373515432__callbacks'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:405:in `__run_callback'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/railties-3.2.9/lib/rails/rack/logger.rb:32:in `call_app'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/railties-3.2.9/lib/rails/rack/logger.rb:16:in `block in call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/tagged_logging.rb:22:in `tagged'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/railties-3.2.9/lib/rails/rack/logger.rb:16:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.1/lib/rack/methodoverride.rb:21:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.1/lib/rack/runtime.rb:17:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.9/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.1/lib/rack/lock.rb:15:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/middleware/static.rb:62:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/railties-3.2.9/lib/rails/engine.rb:479:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/railties-3.2.9/lib/rails/application.rb:223:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.1/lib/rack/content_length.rb:14:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/railties-3.2.9/lib/rails/rack/log_tailer.rb:17:in `call'
+/home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.1/lib/rack/handler/webrick.rb:59:in `service'
+/home/rafa/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/home/rafa/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/home/rafa/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+  Rendered user/map/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (/home/rafa/Pulpit/mindmap/MM/app/views/user/map/index.html.erb:22: syntax error, unexpected tIDENTIFIER, expecting ')'
+...path(map)  , :class => :btn btn-info );@output_buffer.safe_c...
+...                               ^):
+    19:                     
+    20:                     <td><%= map.name %></td>
+    21:                     
+    22:                     <td><%= link_to 'show', user_map_path(map)  , :class => :btn btn-info %></td>         
+    23: 
+    24:                   </tr>
+    25:                 <% end %>
+  actionpack (3.2.9) lib/action_view/template.rb:297:in `module_eval'
+  actionpack (3.2.9) lib/action_view/template.rb:297:in `compile'
+  actionpack (3.2.9) lib/action_view/template.rb:244:in `block in compile!'
+  <internal:prelude>:10:in `synchronize'
+  actionpack (3.2.9) lib/action_view/template.rb:232:in `compile!'
+  actionpack (3.2.9) lib/action_view/template.rb:144:in `block in render'
+  activesupport (3.2.9) lib/active_support/notifications.rb:125:in `instrument'
+  actionpack (3.2.9) lib/action_view/template.rb:143:in `render'
+  actionpack (3.2.9) lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+  actionpack (3.2.9) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (3.2.9) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.9) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.9) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.9) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (3.2.9) lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+  actionpack (3.2.9) lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+  actionpack (3.2.9) lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  actionpack (3.2.9) lib/action_view/renderer/template_renderer.rb:18:in `render'
+  actionpack (3.2.9) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.9) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.9) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.9) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.9) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.9) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.9) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.9) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.9) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.9) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.9) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /home/rafa/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+  activesupport (3.2.9) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.9) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.9) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.9) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.9) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.9) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.9) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.9) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.9) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.9) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:425:in `_run__979130587416247657__process_action__4072522929228896427__callbacks'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.9) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.9) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.9) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.9) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.9) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.9) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.9) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.9) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.9) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.9) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.9) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.9) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.9) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.9) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.9) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.9) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.9) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.9) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  warden (1.2.1) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.1) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.1) lib/warden/manager.rb:34:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.9) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:405:in `_run__3076250011298904838__call__2426195307373515432__callbacks'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.9) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/rafa/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/rafa/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/rafa/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/rafa/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.1ms)
+
+
+Started GET "/user" for 127.0.0.1 at 2013-02-17 13:13:42 +0100
+Processing by User::MapController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mMap Load (0.3ms)[0m  SELECT "maps".* FROM "maps" 
+  Rendered user/map/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 21ms (Views: 17.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-17 13:13:42 +0100
+Served asset /application.css - 304 Not Modified (32ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-02-17 13:13:42 +0100
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-17 13:13:42 +0100
+Served asset /jquery.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-02-17 13:13:42 +0100
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars.js?body=1" for 127.0.0.1 at 2013-02-17 13:13:42 +0100
+Served asset /handlebars.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-17 13:13:42 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/YouAreDaBomb.js?body=1" for 127.0.0.1 at 2013-02-17 13:13:42 +0100
+Served asset /YouAreDaBomb.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modalwindow.js?body=1" for 127.0.0.1 at 2013-02-17 13:13:42 +0100
+Served asset /modalwindow.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/contextMenu.js?body=1" for 127.0.0.1 at 2013-02-17 13:13:42 +0100
+Served asset /templates/contextMenu.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/raphael-min.js?body=1" for 127.0.0.1 at 2013-02-17 13:13:42 +0100
+Served asset /raphael-min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/message.js?body=1" for 127.0.0.1 at 2013-02-17 13:13:42 +0100
+Served asset /templates/message.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/relationMenu.js?body=1" for 127.0.0.1 at 2013-02-17 13:13:42 +0100
+Served asset /templates/relationMenu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/relationsTable.js?body=1" for 127.0.0.1 at 2013-02-17 13:13:42 +0100
+Served asset /templates/relationsTable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-17 13:13:42 +0100
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/user" for 127.0.0.1 at 2013-02-17 13:16:35 +0100
+Processing by User::MapController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mMap Load (0.7ms)[0m  SELECT "maps".* FROM "maps" 
+  Rendered user/map/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 30ms (Views: 23.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-17 13:16:35 +0100
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-02-17 13:16:35 +0100
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-17 13:16:35 +0100
+Served asset /jquery.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/handlebars.js?body=1" for 127.0.0.1 at 2013-02-17 13:16:35 +0100
+Served asset /handlebars.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/YouAreDaBomb.js?body=1" for 127.0.0.1 at 2013-02-17 13:16:35 +0100
+Served asset /YouAreDaBomb.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-17 13:16:35 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-02-17 13:16:35 +0100
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/modalwindow.js?body=1" for 127.0.0.1 at 2013-02-17 13:16:35 +0100
+Served asset /modalwindow.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/raphael-min.js?body=1" for 127.0.0.1 at 2013-02-17 13:16:35 +0100
+Served asset /raphael-min.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/templates/contextMenu.js?body=1" for 127.0.0.1 at 2013-02-17 13:16:35 +0100
+Served asset /templates/contextMenu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/message.js?body=1" for 127.0.0.1 at 2013-02-17 13:16:35 +0100
+Served asset /templates/message.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/relationMenu.js?body=1" for 127.0.0.1 at 2013-02-17 13:16:35 +0100
+Served asset /templates/relationMenu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/relationsTable.js?body=1" for 127.0.0.1 at 2013-02-17 13:16:35 +0100
+Served asset /templates/relationsTable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-17 13:16:35 +0100
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/user/map/3" for 127.0.0.1 at 2013-02-17 13:16:36 +0100
+Processing by User::MapController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mMap Load (0.5ms)[0m  SELECT "maps".* FROM "maps" WHERE "maps"."id" = $1 LIMIT 1  [["id", "3"]]
+  Rendered user/map/show.html.erb within layouts/map (0.1ms)
+Completed 200 OK in 25ms (Views: 19.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-17 13:16:36 +0100
+Served asset /application.css - 304 Not Modified (20ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-17 13:16:36 +0100
+Served asset /jquery.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-02-17 13:16:36 +0100
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/handlebars.js?body=1" for 127.0.0.1 at 2013-02-17 13:16:36 +0100
+Served asset /handlebars.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-17 13:16:36 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-02-17 13:16:36 +0100
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/YouAreDaBomb.js?body=1" for 127.0.0.1 at 2013-02-17 13:16:36 +0100
+Served asset /YouAreDaBomb.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modalwindow.js?body=1" for 127.0.0.1 at 2013-02-17 13:16:36 +0100
+Served asset /modalwindow.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/raphael-min.js?body=1" for 127.0.0.1 at 2013-02-17 13:16:36 +0100
+Served asset /raphael-min.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/templates/contextMenu.js?body=1" for 127.0.0.1 at 2013-02-17 13:16:36 +0100
+Served asset /templates/contextMenu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/message.js?body=1" for 127.0.0.1 at 2013-02-17 13:16:36 +0100
+Served asset /templates/message.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/relationMenu.js?body=1" for 127.0.0.1 at 2013-02-17 13:16:36 +0100
+Served asset /templates/relationMenu.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/templates/relationsTable.js?body=1" for 127.0.0.1 at 2013-02-17 13:16:36 +0100
+Served asset /templates/relationsTable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-17 13:16:36 +0100
+Served asset /application.js - 304 Not Modified (44ms)
+
+
+Started GET "/assets/map.js?body=1" for 127.0.0.1 at 2013-02-17 13:16:36 +0100
+Served asset /map.js - 304 Not Modified (0ms)
+
+
+Started GET "/user/map/2" for 127.0.0.1 at 2013-02-17 13:16:41 +0100
+Processing by User::MapController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mMap Load (0.4ms)[0m  SELECT "maps".* FROM "maps" WHERE "maps"."id" = $1 LIMIT 1  [["id", "2"]]
+  Rendered user/map/show.html.erb within layouts/map (0.0ms)
+Completed 200 OK in 18ms (Views: 15.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-02-17 13:16:41 +0100
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-17 13:16:41 +0100
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-17 13:16:41 +0100
+Served asset /jquery.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/handlebars.js?body=1" for 127.0.0.1 at 2013-02-17 13:16:41 +0100
+Served asset /handlebars.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-17 13:16:41 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-02-17 13:16:41 +0100
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/YouAreDaBomb.js?body=1" for 127.0.0.1 at 2013-02-17 13:16:41 +0100
+Served asset /YouAreDaBomb.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modalwindow.js?body=1" for 127.0.0.1 at 2013-02-17 13:16:41 +0100
+Served asset /modalwindow.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/raphael-min.js?body=1" for 127.0.0.1 at 2013-02-17 13:16:41 +0100
+Served asset /raphael-min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/contextMenu.js?body=1" for 127.0.0.1 at 2013-02-17 13:16:41 +0100
+Served asset /templates/contextMenu.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/templates/message.js?body=1" for 127.0.0.1 at 2013-02-17 13:16:41 +0100
+Served asset /templates/message.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/relationMenu.js?body=1" for 127.0.0.1 at 2013-02-17 13:16:41 +0100
+Served asset /templates/relationMenu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/relationsTable.js?body=1" for 127.0.0.1 at 2013-02-17 13:16:41 +0100
+Served asset /templates/relationsTable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-17 13:16:41 +0100
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/map.js?body=1" for 127.0.0.1 at 2013-02-17 13:16:41 +0100
+Served asset /map.js - 304 Not Modified (0ms)
+
+
+Started GET "/user" for 127.0.0.1 at 2013-02-17 13:21:50 +0100
+Processing by User::MapController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mMap Load (0.4ms)[0m  SELECT "maps".* FROM "maps" 
+  Rendered user/map/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 26ms (Views: 19.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-17 13:21:50 +0100
+Served asset /application.css - 304 Not Modified (17ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-02-17 13:21:50 +0100
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-17 13:21:50 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/YouAreDaBomb.js?body=1" for 127.0.0.1 at 2013-02-17 13:21:50 +0100
+Served asset /YouAreDaBomb.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-02-17 13:21:50 +0100
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/handlebars.js?body=1" for 127.0.0.1 at 2013-02-17 13:21:50 +0100
+Served asset /handlebars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modalwindow.js?body=1" for 127.0.0.1 at 2013-02-17 13:21:50 +0100
+Served asset /modalwindow.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/raphael-min.js?body=1" for 127.0.0.1 at 2013-02-17 13:21:50 +0100
+Served asset /raphael-min.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/templates/contextMenu.js?body=1" for 127.0.0.1 at 2013-02-17 13:21:50 +0100
+Served asset /templates/contextMenu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/message.js?body=1" for 127.0.0.1 at 2013-02-17 13:21:50 +0100
+Served asset /templates/message.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/relationMenu.js?body=1" for 127.0.0.1 at 2013-02-17 13:21:50 +0100
+Served asset /templates/relationMenu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/relationsTable.js?body=1" for 127.0.0.1 at 2013-02-17 13:21:50 +0100
+Served asset /templates/relationsTable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-17 13:21:50 +0100
+Served asset /application.js - 304 Not Modified (5ms)
+Connecting to database specified by database.yml

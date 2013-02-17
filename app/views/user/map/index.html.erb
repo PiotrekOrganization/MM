@@ -1,9 +1,29 @@
-Wybierz mape :
 
 
+<div class="center-table">
 
-<% @maps.each do |map| %>
-<p><%= link_to map.name, user_map_path(map) %></p>
+<table class="table view-user-table">
+              <thead>
+                <tr>
+                  
+                  
+                  <th>Map name</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
 
+              <tbody>
+                <% @maps.each do |map| %>
+                  <tr>
 
-<% end %> 
+                    
+                    <td><%= map.name %></td>
+                    
+                    <td><%= link_to 'show', user_map_path(map)  , :class => 'btn btn-info' %></td>         
+
+                  </tr>
+                <% end %>
+                
+              </tbody>
+</table>
+<div>

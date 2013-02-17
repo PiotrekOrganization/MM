@@ -266,4 +266,9 @@ body {
 	width: 100%;
 }
 
+table.view-user-table {
+	width:500px;
+}
+div.center-table {width:500px; margin:0 auto; text-align: center;}
+
 
