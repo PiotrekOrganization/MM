@@ -1,12 +1,6 @@
 
-Mindmap/config/database.yml
-
-*.log
-
-*.log
+config/database.yml
 
 *.log
 
 tmp/pids/server.pid
-
-*.log
