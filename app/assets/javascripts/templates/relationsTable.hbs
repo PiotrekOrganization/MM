@@ -1,16 +1,16 @@
-<table>
+<table class="relations-table table">
 	<thead>
-		<th>Object name</th>
-		<th>Relation name</th>
-		<th>Role</th>
+		<th>Parent name</th>
+		<th>Relation</th>
+		<th>Child name</th>
 	</thead>
 	<tbody>
 		{{#if relations}}
 			{{#each relations}}
 			<tr>
-			<td>{{parent}}</td>
-			<td>{{child}}</td>
+			<td>{{parent.title}}</td>
 			<td>{{this.title}}</td>
+			<td>{{child.title}}</td>
 			</tr>
 			{{/each}}
 		{{else}}

@@ -97,6 +97,11 @@ class Glue
 
 		@after(@useCase, 'updateRelationTitle', (label_id, new_title) -> storage.updateRelationTitle(label_id, new_title))
 
+		@after(@gui, 'updateNodeTitle', (node_id, new_title) -> useCase.updateNodeTitle(parseInt(node_id), new_title))
+
+		@after(@useCase, 'updateNodeTitle', (node_id, new_title) -> storage.updateNodeTitle(node_id, new_title))
+
+
 	before: (object, methodName, adviseMethod) ->
 		YouAreDaBomb(object, methodName).before(adviseMethod)
 	
@@ -121,6 +126,8 @@ class UseCase
 	updateNodeTitle: (node_id, new_title) ->
 
 	updateRelationTitle: (label_id, new_title) ->
+
+	updateNodeTitle: (node_id, new_title) ->
 
 class Storage
 
@@ -178,9 +185,13 @@ class Storage
 		resultsArray = []
 		for relation in @relations
 			if(relation.elements[0] == node_id)
-				resultsArray.push { parent: node_id, child: relation.elements[1], title: relation.title }
+				parent_object = @getNode(node_id)
+				child_object = @getNode(relation.elements[1])
+				resultsArray.push { parent: parent_object, child: child_object, title: relation.title }
 			else if(relation.elements[1] == node_id)
-				resultsArray.push { parent: relation.elements[0], child: node_id, title: relation.title }
+				parent_object = @getNode(relation.elements[0])
+				child_object = @getNode(node_id)
+				resultsArray.push { parent: parent_object, child: child_object, title: relation.title }
 		console.log('storage:getRelationByNodeId(' + node_id + ')')
 		console.log(resultsArray)
 		return resultsArray
@@ -225,6 +236,14 @@ class Storage
 			if( relation.label.id == label_id )
 				relation.title = new_title
 		@relations
+
+	updateNodeTitle: (node_id, new_title) ->
+		console.log('new title: ' + new_title)
+		console.log(@relations)
+		for node in @nodes
+			if( node.id == node_id )
+				node.title = new_title
+		@nodes
 
 class Node
 	constructor: (title, type = 1) -> 
@@ -540,17 +559,18 @@ class Gui
 		node.find('.map-element').html( new_title )
 		type = node.attr('data-type')
 		@updateRelationTitle(node.attr('data-id'), new_title) if type == "2"
+		@updateNodeTitle(node.attr('data-id'), new_title) if type == "1"
 		node.unbind()
 		@prepareNodeTriggers(node)
 		@prepareNodeDrag(node)
 
 	prepareNodeCurves: (node_id, parent_id) ->
 		node = @canvas.find('.map-element-container[data-id='+node_id+']')
-		node_y = node.offset().top
-		node_x = node.offset().left
+		node_y = node.offset().top + parseInt(node.height())/2
+		node_x = node.offset().left + parseInt(node.width())/2
 		parent = @canvas.find('.map-element-container[data-id='+parent_id+']')
-		parent_y = parent.offset().top
-		parent_x = parent.offset().left
+		parent_y = parent.offset().top + parseInt(parent.height())/2
+		parent_x = parent.offset().left + parseInt(parent.width())/2
 		path = @paper.path('M' + parent_x + ' ' + parent_y + 'L' + node_x + ' ' + node_y);
 		@nodeCurvesPrepared [node_id, parent_id, path]
 
@@ -560,15 +580,18 @@ class Gui
 
 	reDraw: (node, parent, path) ->
 		path.remove()
-		node_y = node.offset().top
-		node_x = node.offset().left
-		parent_y = parent.offset().top
-		parent_x = parent.offset().left
+		node_y = node.offset().top + parseInt(node.height())/2
+		node_x = node.offset().left + parseInt(node.width())/2
+		parent_y = parent.offset().top + parseInt(parent.height())/2
+		parent_x = parent.offset().left + parseInt(parent.width())/2
 		path = @paper.path('M' + parent_x + ' ' + parent_y + 'L' + node_x + ' ' + node_y);
 		@reDrown [parseInt( node.attr('data-id') ), parseInt( parent.attr('data-id') ), path]
 
 	updateRelationTitle: (label_id, new_title) ->
 		console.log('gui:updateRelationTitle')
+
+	updateNodeTitle: (node_id, new_title) ->
+		console.log('gui:updateNodeTitle')
 
 class Spa
 	constructor: ->
