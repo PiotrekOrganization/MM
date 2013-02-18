@@ -1,6 +1,6 @@
 class User::MapController < User::UserController
 	
-	layout 'map', :only => [ :show , :new ]
+	layout 'map', :only => [ :show ]
 	
 	def show
 		@map = Map.find(params[:id])
