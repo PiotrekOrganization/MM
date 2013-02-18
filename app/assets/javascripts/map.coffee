@@ -546,11 +546,11 @@ class Gui
 
 	prepareNodeCurves: (node_id, parent_id) ->
 		node = @canvas.find('.map-element-container[data-id='+node_id+']')
-		node_y = node.offset().top
-		node_x = node.offset().left
+		node_y = node.offset().top + parseInt(node.height())/2
+		node_x = node.offset().left + parseInt(node.width())/2
 		parent = @canvas.find('.map-element-container[data-id='+parent_id+']')
-		parent_y = parent.offset().top
-		parent_x = parent.offset().left
+		parent_y = parent.offset().top + parseInt(parent.height())/2
+		parent_x = parent.offset().left + parseInt(parent.width())/2
 		path = @paper.path('M' + parent_x + ' ' + parent_y + 'L' + node_x + ' ' + node_y);
 		@nodeCurvesPrepared [node_id, parent_id, path]
 
@@ -560,10 +560,10 @@ class Gui
 
 	reDraw: (node, parent, path) ->
 		path.remove()
-		node_y = node.offset().top
-		node_x = node.offset().left
-		parent_y = parent.offset().top
-		parent_x = parent.offset().left
+		node_y = node.offset().top + parseInt(node.height())/2
+		node_x = node.offset().left + parseInt(node.width())/2
+		parent_y = parent.offset().top + parseInt(parent.height())/2
+		parent_x = parent.offset(). + parseInt(parent.width())/2
 		path = @paper.path('M' + parent_x + ' ' + parent_y + 'L' + node_x + ' ' + node_y);
 		@reDrown [parseInt( node.attr('data-id') ), parseInt( parent.attr('data-id') ), path]
 

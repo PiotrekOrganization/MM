@@ -51885,3 +51885,235 @@ Served asset /templates/contextMenu.js - 304 Not Modified (0ms)
 Started GET "/assets/templates/relationsTable.js?body=1" for 127.0.0.1 at 2013-02-18 15:13:26 +0100
 Served asset /templates/relationsTable.js - 304 Not Modified (0ms)
 >>>>>>> sync
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20121217213250)
+Migrating to CreateMaps (20121217215013)
+Migrating to CreateItems (20121217220451)
+Migrating to AddDescriptionToItem (20121217222516)
+Migrating to AddItemIdToItems (20130105115222)
+Migrating to AddNameToItems (20130106130149)
+Migrating to DropItemTable (20130106161056)
+Migrating to NewCreateTableItems (20130106161647)
+Migrating to AddMapIdToItems (20130106215813)
+Migrating to AddNameToMap (20130216203641)
+Migrating to AddUserIdToMap (20130217123332)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (1.3ms)[0m  [1mALTER TABLE "maps" ADD COLUMN "user_id" integer[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130217123332')
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+
+
+Started GET "/user" for 127.0.0.1 at 2013-02-18 15:15:33 +0100
+Processing by User::MapController#index as HTML
+  [1m[36mUser Load (3.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mMap Load (0.5ms)[0m  SELECT "maps".* FROM "maps" WHERE "maps"."user_id" = 1
+  Rendered user/map/index.html.erb within layouts/application (37.9ms)
+Completed 200 OK in 525ms (Views: 209.0ms | ActiveRecord: 27.3ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-02-18 15:15:34 +0100
+Served asset /twitter-bootstrap-static/bootstrap.css - 200 OK (11ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-02-18 15:15:34 +0100
+Served asset /twitter-bootstrap-static/fontawesome.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-18 15:15:34 +0100
+Served asset /jquery_ujs.js - 200 OK (6ms)
+
+
+Started GET "/assets/handlebars.js?body=1" for 127.0.0.1 at 2013-02-18 15:15:34 +0100
+Served asset /handlebars.js - 200 OK (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-18 15:15:34 +0100
+Served asset /jquery.js - 200 OK (8ms)
+
+
+Started GET "/assets/YouAreDaBomb.js?body=1" for 127.0.0.1 at 2013-02-18 15:15:34 +0100
+Served asset /YouAreDaBomb.js - 200 OK (2ms)
+
+
+Started GET "/assets/modalwindow.js?body=1" for 127.0.0.1 at 2013-02-18 15:15:34 +0100
+Served asset /modalwindow.js - 304 Not Modified (49ms)
+
+
+Started GET "/assets/raphael-min.js?body=1" for 127.0.0.1 at 2013-02-18 15:15:34 +0100
+Served asset /raphael-min.js - 200 OK (2ms)
+
+
+Started GET "/assets/templates/message.js?body=1" for 127.0.0.1 at 2013-02-18 15:15:34 +0100
+Served asset /templates/message.js - 200 OK (1ms)
+
+
+Started GET "/assets/templates/contextMenu.js?body=1" for 127.0.0.1 at 2013-02-18 15:15:34 +0100
+Served asset /templates/contextMenu.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/templates/relationsTable.js?body=1" for 127.0.0.1 at 2013-02-18 15:15:34 +0100
+Served asset /templates/relationsTable.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-18 15:15:34 +0100
+Served asset /application.js - 200 OK (118ms)
+
+
+Started GET "/assets/templates/relationMenu.js?body=1" for 127.0.0.1 at 2013-02-18 15:15:34 +0100
+Served asset /templates/relationMenu.js - 200 OK (6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-18 15:15:34 +0100
+Served asset /application.css - 200 OK (18ms)
+
+
+Started GET "/user/map/new" for 127.0.0.1 at 2013-02-18 15:15:47 +0100
+Processing by User::MapController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered user/map/new.html.erb within layouts/map (3.3ms)
+Completed 200 OK in 29ms (Views: 19.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/modalwindow.js?body=1" for 127.0.0.1 at 2013-02-18 15:15:47 +0100
+Served asset /modalwindow.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/contextMenu.js?body=1" for 127.0.0.1 at 2013-02-18 15:15:47 +0100
+Served asset /templates/contextMenu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/relationsTable.js?body=1" for 127.0.0.1 at 2013-02-18 15:15:47 +0100
+Served asset /templates/relationsTable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/map.js?body=1" for 127.0.0.1 at 2013-02-18 15:15:47 +0100
+Served asset /map.js - 304 Not Modified (12ms)
+
+
+Started POST "/user/map" for 127.0.0.1 at 2013-02-18 15:15:50 +0100
+Processing by User::MapController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lUyEid9DjMFGm/1yK9SXxu/tszAEiuy3ox3XcOEjAA0=", "map"=>{"name"=>"test", "user_id"=>"1"}, "button"=>""}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (32.1ms)[0m  INSERT INTO "maps" ("created_at", "name", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Mon, 18 Feb 2013 14:15:50 UTC +00:00], ["name", "test"], ["updated_at", Mon, 18 Feb 2013 14:15:50 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/user/map
+Completed 302 Found in 39ms (ActiveRecord: 33.4ms)
+
+
+Started GET "/user/map" for 127.0.0.1 at 2013-02-18 15:15:50 +0100
+Processing by User::MapController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mMap Load (0.4ms)[0m  [1mSELECT "maps".* FROM "maps" WHERE "maps"."user_id" = 1[0m
+  Rendered user/map/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 17ms (Views: 14.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/modalwindow.js?body=1" for 127.0.0.1 at 2013-02-18 15:15:50 +0100
+Served asset /modalwindow.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/contextMenu.js?body=1" for 127.0.0.1 at 2013-02-18 15:15:50 +0100
+Served asset /templates/contextMenu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/relationsTable.js?body=1" for 127.0.0.1 at 2013-02-18 15:15:50 +0100
+Served asset /templates/relationsTable.js - 304 Not Modified (0ms)
+
+
+Started GET "/user/map/1" for 127.0.0.1 at 2013-02-18 15:15:52 +0100
+Processing by User::MapController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mMap Load (0.5ms)[0m  [1mSELECT "maps".* FROM "maps" WHERE "maps"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered user/map/show.html.erb within layouts/map (0.8ms)
+Completed 200 OK in 18ms (Views: 12.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/modalwindow.js?body=1" for 127.0.0.1 at 2013-02-18 15:15:52 +0100
+Served asset /modalwindow.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/contextMenu.js?body=1" for 127.0.0.1 at 2013-02-18 15:15:52 +0100
+Served asset /templates/contextMenu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/map.js?body=1" for 127.0.0.1 at 2013-02-18 15:15:52 +0100
+Served asset /map.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/relationsTable.js?body=1" for 127.0.0.1 at 2013-02-18 15:15:52 +0100
+Served asset /templates/relationsTable.js - 304 Not Modified (0ms)
+
+
+Started GET "/user/map/1" for 127.0.0.1 at 2013-02-18 15:19:21 +0100
+Processing by User::MapController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mMap Load (0.4ms)[0m  [1mSELECT "maps".* FROM "maps" WHERE "maps"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered user/map/show.html.erb within layouts/map (0.1ms)
+Compiled map.js  (355ms)  (pid 95776)
+Completed 200 OK in 412ms (Views: 408.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-02-18 15:19:22 +0100
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-18 15:19:22 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-02-18 15:19:22 +0100
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-18 15:19:22 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-18 15:19:22 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars.js?body=1" for 127.0.0.1 at 2013-02-18 15:19:22 +0100
+Served asset /handlebars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/YouAreDaBomb.js?body=1" for 127.0.0.1 at 2013-02-18 15:19:22 +0100
+Served asset /YouAreDaBomb.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modalwindow.js?body=1" for 127.0.0.1 at 2013-02-18 15:19:22 +0100
+Served asset /modalwindow.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/contextMenu.js?body=1" for 127.0.0.1 at 2013-02-18 15:19:22 +0100
+Served asset /templates/contextMenu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/raphael-min.js?body=1" for 127.0.0.1 at 2013-02-18 15:19:22 +0100
+Served asset /raphael-min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/message.js?body=1" for 127.0.0.1 at 2013-02-18 15:19:22 +0100
+Served asset /templates/message.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/relationsTable.js?body=1" for 127.0.0.1 at 2013-02-18 15:19:22 +0100
+Served asset /templates/relationsTable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates/relationMenu.js?body=1" for 127.0.0.1 at 2013-02-18 15:19:22 +0100
+Served asset /templates/relationMenu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/map.js?body=1" for 127.0.0.1 at 2013-02-18 15:19:22 +0100
+Served asset /map.js - 200 OK (6ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-18 15:19:22 +0100
+Served asset /application.js - 304 Not Modified (0ms)
