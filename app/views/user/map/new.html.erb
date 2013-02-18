@@ -1,5 +1,5 @@
 <%= form_for [:user,@map], :url => { :action => "create" }, :html => {:class => "nifty_form"} do |f| %>
-  <%= f.text_field :name %>
-  <%= f.hidden_field :user_id, :value => current_user.id %> 
-  <%= f.button :submit %>
+  <%= f.text_field :name , :class =>"input-text-name"%>
+  <%= f.hidden_field :user_id, :value => current_user.id  %> 
+  <%= f.button :submit, :class => "btn btn-primary" %>
 <% end %>
