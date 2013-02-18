@@ -97,6 +97,11 @@ class Glue
 
 		@after(@useCase, 'updateRelationTitle', (label_id, new_title) -> storage.updateRelationTitle(label_id, new_title))
 
+		@after(@gui, 'updateNodeTitle', (node_id, new_title) -> useCase.updateNodeTitle(parseInt(node_id), new_title))
+
+		@after(@useCase, 'updateNodeTitle', (node_id, new_title) -> storage.updateNodeTitle(node_id, new_title))
+
+
 	before: (object, methodName, adviseMethod) ->
 		YouAreDaBomb(object, methodName).before(adviseMethod)
 	
@@ -121,6 +126,8 @@ class UseCase
 	updateNodeTitle: (node_id, new_title) ->
 
 	updateRelationTitle: (label_id, new_title) ->
+
+	updateNodeTitle: (node_id, new_title) ->
 
 class Storage
 
@@ -229,6 +236,14 @@ class Storage
 			if( relation.label.id == label_id )
 				relation.title = new_title
 		@relations
+
+	updateNodeTitle: (node_id, new_title) ->
+		console.log('new title: ' + new_title)
+		console.log(@relations)
+		for node in @nodes
+			if( node.id == node_id )
+				node.title = new_title
+		@nodes
 
 class Node
 	constructor: (title, type = 1) -> 
@@ -544,6 +559,7 @@ class Gui
 		node.find('.map-element').html( new_title )
 		type = node.attr('data-type')
 		@updateRelationTitle(node.attr('data-id'), new_title) if type == "2"
+		@updateNodeTitle(node.attr('data-id'), new_title) if type == "1"
 		node.unbind()
 		@prepareNodeTriggers(node)
 		@prepareNodeDrag(node)
@@ -573,6 +589,9 @@ class Gui
 
 	updateRelationTitle: (label_id, new_title) ->
 		console.log('gui:updateRelationTitle')
+
+	updateNodeTitle: (node_id, new_title) ->
+		console.log('gui:updateNodeTitle')
 
 class Spa
 	constructor: ->
