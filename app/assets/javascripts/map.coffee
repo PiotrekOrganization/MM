@@ -178,9 +178,13 @@ class Storage
 		resultsArray = []
 		for relation in @relations
 			if(relation.elements[0] == node_id)
-				resultsArray.push { parent: node_id, child: relation.elements[1], title: relation.title }
+				parent_object = @getNode(node_id)
+				child_object = @getNode(relation.elements[1])
+				resultsArray.push { parent: parent_object, child: child_object, title: relation.title }
 			else if(relation.elements[1] == node_id)
-				resultsArray.push { parent: relation.elements[0], child: node_id, title: relation.title }
+				parent_object = @getNode(relation.elements[0])
+				child_object = @getNode(node_id)
+				resultsArray.push { parent: parent_object, child: child_object, title: relation.title }
 		console.log('storage:getRelationByNodeId(' + node_id + ')')
 		console.log(resultsArray)
 		return resultsArray

@@ -258,12 +258,12 @@ body {
 }
 
 .modal-window-box .modal-window-close {
-	position: relative;
-	top: -40px;
+	display: none;
 }
 
 .modal-window-box table {
 	width: 100%;
+	margin-bottom: 0 !important;
 }
 
 table.view-user-table {
