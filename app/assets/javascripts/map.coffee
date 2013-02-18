@@ -563,7 +563,7 @@ class Gui
 		node_y = node.offset().top + parseInt(node.height())/2
 		node_x = node.offset().left + parseInt(node.width())/2
 		parent_y = parent.offset().top + parseInt(parent.height())/2
-		parent_x = parent.offset(). + parseInt(parent.width())/2
+		parent_x = parent.offset().left + parseInt(parent.width())/2
 		path = @paper.path('M' + parent_x + ' ' + parent_y + 'L' + node_x + ' ' + node_y);
 		@reDrown [parseInt( node.attr('data-id') ), parseInt( parent.attr('data-id') ), path]
 
